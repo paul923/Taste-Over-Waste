@@ -1,0 +1,51 @@
+#page {
+  box-sizing: content-box;
+  width: 90%;
+  height: 900px;
+  border: 3px solid black;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  font-size: 20pt;
+}
+#menu {
+  width: 100%;
+  height: 70px;
+  background-color: gainsboro;
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background-color: gainsboro;
+}
+#content {
+  background-color: bisque;
+  width: 100%;
+  height: 760px;
+  position: ;
+}
+#fridge {
+  width: 66%;
+  height: 100%;
+  float: left;
+  background-color: burlywood;
+}
+#rightSide {
+  float: right;
+  width: 34%;
+  height: 100%;
+  background-color: brown;
+}
+#infoBox {
+  width: 100%;
+  height: 50%;
+  background-color: antiquewhite;
+}
+#pot {
+  width: 100%;
+  height: 50%;
+  background-color: chocolate
+}
