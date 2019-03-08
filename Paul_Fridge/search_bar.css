@@ -1,0 +1,73 @@
+#page {
+  box-sizing: content-box;
+  width: 90%;
+  height: 900px;
+  border: 3px solid black;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  font-size: 20pt;
+}
+#menu {
+  width: 100%;
+  height: 70px;
+  background-color: gainsboro;
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background-color: gainsboro;
+}
+#content {
+  background-color: bisque;
+  width: 100%;
+  height: 760px;
+  position: ;
+}
+#searchBar {
+  background-color: cadetblue;
+  width: 100%;
+  height: 8%;
+  text-align: center;
+}
+#lowerBox {
+  background-color: aquamarine;
+  width: auto;
+  height: 92%;
+  position: relative;
+}
+.column {
+  float: left;
+}
+#lowerLeft {
+  background-color: black;
+  width: 20%;
+  height: 100%;
+  float: left;
+}
+#lowerMid {
+  background-color: white;
+  width: 60%;
+  height: 100%;
+}
+#lowerRight {
+  background-color: grey;
+  width: 20%;
+  height: 100%;
+}
+.items {
+  border: 1px solid black;
+  height: 70px;
+  margin: 10px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+#quantity {
+  border: 1px solid black;
+  margin: 10px;
+  margin-top: 30px;
+  height: 200px;
+}
