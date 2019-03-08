@@ -3,44 +3,80 @@
   <title>Fridge Project</title>
   <meta charset="UTF-8">
   <style>
+    #container {
+      width: 100%;
+      height: 1000px;
+      text-align: center;
+      background-color: #666699;
+    }
+
     #navBar {
       width: 100%;
       height: 50px;
       display: block;
       background-color: #7a7a52;
     }
+
     #menu {
       text-align: center;
     }
-    #menu li{
+
+    #menu li {
       display: inline;
       margin-left: 10%;
       margin-right: 10%;
     }
+
     #search {
       display: block;
-      text-align: center;
+      height: 50px;
       margin-top: 100px;
-      background-color:
+      background-color: #999966;
+      text-align: center;
     }
+
     #message {
       display: block;
       text-align: center;
+      height: 50px;
+      background-color: #c2c2a3;
     }
-    
+
+    #setting {
+      float: left;
+      margin-top: 15%;
+      width: 7%;
+      height: 10%;
+      background-color: #d6d6c2;
+      text-align: center;
+    }
+
+    footer {
+      display: block;
+      clear: both;
+      height: 10%;
+      background-color: #a3a375;
+    }
+
   </style>
+
   <body>
-    <nav id="navBar">
-      <ul id="menu">
-        <li>RECIPES</li>
-        <li>REFRIDGERATOR</li>
-        <li>INGREDIENTS</li>
-      </ul>
-    </nav>
-    <div id="search">SEARCH BAR</div>
-    <div id="message">MESSAGE OF THE DAY</div>
-    <div id="setting">SETTING ICON</div>
-    <footer>FOOTER STUFF</footer>
+    <div id="container">
+      <nav id="navBar">
+
+        <ul id="menu">
+          <li>RECIPES</li>
+          <li>REFRIDGERATOR</li>
+          <li>INGREDIENTS</li>
+        </ul>
+      </nav>
+      <p>BACKGROUND</p>
+      <div id="search">SEARCH BAR</div>
+      <div id="message">MESSAGE OF THE DAY</div>
+      <p>BACKGROUND</p>
+      <div id="setting">SETTING ICON</div>
+      <footer>FOOTER STUFF</footer>
+    </div>
   </body>
 
 </html>
