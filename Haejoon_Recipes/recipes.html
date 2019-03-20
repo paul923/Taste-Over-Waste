@@ -4,135 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<style>
-  html,
-  body,
-  h1,
-  h2,
-  h3,
-  h4 {
-    font-family: "Lato", sans-serif
-  }
-
-  .topper {
-    width: 100%;
-    height: 8vw;
-    background-color: aliceblue;
-  }
-
-  .menu-button {
-    padding-top: .8em;
-    padding-bottom: .8em;
-    float: left;
-    margin-top: 1vw;
-    margin-left: 1.66%;
-    margin-right: 1.66%;
-    width: 30%;
-    background-color: beige;
-    text-align: center;
-  }
-
-  a {
-    font-size: 2em;
-    text-decoration: none;
-    color: black;
-
-  }
-
-  .content {
-    padding: 0;
-    margin: 10px;
-    background-color: aqua;
-  }
-
-  .title-area {
-    padding: 10px;
-    background-color: bisque;
-  }
-
-  #title {
-    margin: auto;
-    background-color: darksalmon;
-
-    width: 50%;
-    height: 1.5em;
-    text-align: center;
-    border-radius: 14px;
-
-  }
-
-  .recipe-area {
-    width: 100%;
-    height: 40vw;
-    background-color: coral;
-
-  }
-
-  #video-area {
-    padding-top: 5vw;
-    margin: 0;
-    float: left;
-    width: 50%;
-    height: 35vw;
-    background-color: floralwhite;
-  }
-
-  iframe {
-    width: 400px;
-    height: 230px;
-  }
-
-  #iframe-container {
-    width: auto;
-    text-align: center;
-
-  }
-
-  .small-title {
-    margin-top: 2vw;
-    margin-bottom: 2vw;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 4px;
-    width: 70%;
-
-    background-color: bisque;
-    text-align: center;
-    border-radius: 7px;
-  }
-
-  #text-area {
-    float: left;
-    width: 50%;
-    height: 100%;
-    background-color: floralwhite;
-  }
-
-  #text-block {
-    margin-top: 2vw;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    height: 90%;
-    background-color: cornsilk;
-  }
-
-  .text-box {}
-
-  li {
-    display: inline-block;
-    width: 80%;
-  }
-
-  ul {
-    list-style-type: none;
-  }
-
-  ul li:before {
-    content: "\2713";
-    color: firebrick;
-  }
-</style>
+<link rel="stylesheet" type="text/css" href="recipes.css">
 
 <body>
 
@@ -161,7 +33,7 @@
     <div class="recipe-area">
       <div id="video-area">
         <div class="small-title">
-          <div #id="video-title">Video Title</div>
+          <div id="video-title">Video Title</div>
         </div>
         <div id="iframe-container">
           <iframe src="https://www.youtube.com/embed/BGVmFZ9o_Zc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

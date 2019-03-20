@@ -1,36 +1,63 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <link rel="stylesheet" type="text/css" href="Fridge.css">
-  </head>
+<head>
+  <link rel="stylesheet" type="text/css" href="Fridge.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
 
-  <body>
-    <div id="page">
-      <nav>
-        <div id="menu">
-          menu
-        </div>
-      </nav>
-      <div id="content">
-        <div id="fridge">
-          fridge
-        </div>
-        <div id="rightSide">
-          <div id="infoBox">
-            info box
+<body>
+  <div id="page">
+    <nav>
+      <div id="menu">
+        <div>
+          <div class="menu-button">
+            <a href="./recipes.html" class="block">Recipes</a>
           </div>
-          <div id="pot">
-            Pot
+          <div class="menu-button">
+            <a href="./main.html" class="block">Fridge</a>
+          </div>
+          <div class="menu-button">
+            <a href="./ingredients.html" class="block">Ingredients</a>
           </div>
         </div>
       </div>
-      <footer>
-        <div id="footer">
-          footer
+    </nav>
+    <div id="content">
+      <div id="fridge-section">
+        <div id="fridge">
+          <div class="fridge-block">item1</div>
+
         </div>
-      </footer>
+
+      </div>
+      <div id="rightSide">
+        <div id="infoBox">
+          info box
+        </div>
+        <div id="pot">
+          Pot
+        </div>
+      </div>
     </div>
-  </body>
+    <footer>
+      <div id="footer">
+        footer
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    /*
+    <![CDATA[*/
+    $(document).ready(function() {
+      var divFridgeBlock = $("<div></div>").attr("class", "fridge-block").html("item2");
+
+      $("#fridge").append(divFridgeBlock.clone());
+    })
+    /*]]>*/
+
+  </script>
+</body>
 
 </html>
