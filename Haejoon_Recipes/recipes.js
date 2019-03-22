@@ -6,11 +6,13 @@
       var recipeRef = firebase.database().ref("recipes/" + recipeName);
       $("#title b").html(recipeName);
 
-      recipeRef.once("value", function (snapshot) {
-        var data = snapshot.val();
-      }).then(function (data) {
-        console.log(typeof data);
-
+      var urlRef = recipeRef.child("video-url");
+      urlRef.once("value", function (snapshot) {
+        data = snapshot.val();
+      }).then(function () {
+        console.log(data);
+        iframe = $("<iframe></iframe>").attr("src", data).attr("frameborder", "'0'");
+        $("#iframe-container").append(iframe);
       });
 
       var ingreRef = recipeRef.child("ingredients-list");
