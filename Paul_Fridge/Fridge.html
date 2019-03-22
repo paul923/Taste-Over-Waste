@@ -3,14 +3,13 @@
 
 <head>
   <link rel="stylesheet" type="text/css" href="Fridge.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 
 <body>
   <div id="page">
     <nav>
       <div id="menu">
-        <div>
           <div class="menu-button">
             <a href="./recipes.html" class="block">Recipes</a>
           </div>
@@ -20,14 +19,14 @@
           <div class="menu-button">
             <a href="./ingredients.html" class="block">Ingredients</a>
           </div>
-        </div>
       </div>
     </nav>
     <div id="content">
       <div id="fridge-section">
         <div id="fridge">
-          <div class="fridge-block">item1</div>
-
+          <a href="../Shane_Ingredients/ingredients.html" style="text-decoration: none">
+          <div class="fridge-block">item</div>
+          </a>
         </div>
 
       </div>
@@ -51,9 +50,12 @@
     /*
     <![CDATA[*/
     $(document).ready(function() {
-      var divFridgeBlock = $("<div></div>").attr("class", "fridge-block").html("item2");
+      var divFridgeBlock = $("<div></div>").attr("class", "fridge-block").html("item");
 
       $("#fridge").append(divFridgeBlock.clone());
+      $("#fridge").append(divFridgeBlock.clone());
+      
+      
     })
     /*]]>*/
 
