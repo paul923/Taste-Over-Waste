@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html>
-<title>Fridge Project</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" type="text/css" href="recipes.css">
+<head>
+  <title>Fridge Project</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" type="text/css" href="recipes.css">
+
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBmkcN2V9VtYome1TD3A3WFUQGhvkOPtAo",
+      authDomain: "projectone-2e3bf.firebaseapp.com",
+      databaseURL: "https://projectone-2e3bf.firebaseio.com",
+      projectId: "projectone-2e3bf",
+      storageBucket: "projectone-2e3bf.appspot.com",
+      messagingSenderId: "851881954801"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+</head>
 
 <body>
 
-  <!-- Links (sit on top) -->
+  <!-- Links (sit on topz) -->
   <div class="topper">
     <div>
       <div class="menu-button">
@@ -65,6 +82,33 @@
 
 
   </div>
+
+
+  <script>
+    document.getElementById("button").addEventListener("click", function() {
+      ShowList("team29");
+    });
+
+    function ShowList(category) {
+      var dbRef = firebase.database().ref("teams/" + category);
+      var promise = dbRef.once("value", function(snap) {
+        list = snap.val();
+      });
+      promise.then(function() {
+        DisplayList(list); //JSON object
+      });
+
+      function DisplayList(list) {
+        console.log(list);
+        for (x in list) {
+          var para = document.createElement("p");
+          document.body.appendChild(para);
+          var node = document.createTextNode(x);
+          para.appendChild(node);
+        }
+      }
+    };
+  </script>
 
 
 </body>
