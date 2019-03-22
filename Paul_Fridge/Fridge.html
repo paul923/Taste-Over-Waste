@@ -4,6 +4,19 @@
 <head>
   <link rel="stylesheet" type="text/css" href="Fridge.css">
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBmkcN2V9VtYome1TD3A3WFUQGhvkOPtAo",
+      authDomain: "projectone-2e3bf.firebaseapp.com",
+      databaseURL: "https://projectone-2e3bf.firebaseio.com",
+      projectId: "projectone-2e3bf",
+      storageBucket: "projectone-2e3bf.appspot.com",
+      messagingSenderId: "851881954801"
+    };
+    firebase.initializeApp(config);
+  </script>
 </head>
 
 <body>
@@ -26,13 +39,22 @@
         <div id="fridge">
           <a href="../Shane_Ingredients/ingredients.html" style="text-decoration: none">
           <div class="fridge-block">item</div>
+          <div class="fridge-block">item</div>
           </a>
+          <div class="fridge-block" id="item3">item</div>
         </div>
 
       </div>
       <div id="rightSide">
         <div id="infoBox">
-          info box
+          <div id="ingredientName"> 
+          </div>
+          <div id="ingredientInfo">
+          </div>
+          <div id="add" class="button">
+          </div>
+          <div id="discard" class="button">
+          </div>
         </div>
         <div id="pot">
           Pot
@@ -46,20 +68,8 @@
     </footer>
   </div>
 
-  <script>
-    /*
-    <![CDATA[*/
-    $(document).ready(function() {
-      var divFridgeBlock = $("<div></div>").attr("class", "fridge-block").html("item");
 
-      $("#fridge").append(divFridgeBlock.clone());
-      $("#fridge").append(divFridgeBlock.clone());
-      
-      
-    })
-    /*]]>*/
-
-  </script>
+  <script src="Fridge.js"></script>
 </body>
 
 </html>
