@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Tabs</title>
+  <link rel="stylesheet" type="text/css" href="tabs.css">
+</head>
+
+<body>
+
+  <div class="tabsContainer">
+
+    <div class="buttonsContainer">
+
+      <button onclick="showPanel(0,'#cca300')">Recipes</button>
+      <button onclick="showPanel(1,'#4dd2ff')">Refridgerator</button>
+      <button onclick="showPanel(2,'#408000')">Ingredients</button>
+
+    </div>
+
+  </div>
+
+  <div class="tabPanel">Recipes Content</div>
+  <div class="tabPanel">Refridgerator Content</div>
+
+  <div class="tabPanel">
+
+    <div class="searchContainer">
+      <input class="searchText" type="text" name="search" placeholder="Search For Ingredients">
+      <a class="searchButton" href="#">
+        <i class="fas fa-search"></i>
+      </a>
+    </div>
+
+  </div>
+
+
+
+  <script src="tabs.js"></script>
+</body>
+
+</html>
