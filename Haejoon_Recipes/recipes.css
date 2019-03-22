@@ -125,3 +125,7 @@ ul li:before {
   content: "\2713";
   color: firebrick;
 }
+
+ol {
+  list-style-type: decimal;
+}
