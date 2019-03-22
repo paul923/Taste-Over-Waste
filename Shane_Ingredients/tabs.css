@@ -1,21 +1,20 @@
 .tabsContainer {
   width: 100%;
-  height: 100px;
+  height: 50px;
 }
 
 .buttonsContainer {
   height: 100%;
 }
-
 button {
-  width: 29%;
+  filter: opacity(50%);
+}
+.buttonsContainer button {
+  width: 33%;
   height: 100%;
   float: left;
-  margin-right: 3%;
   border: none;
   outline: none;
-  border-top-left-radius: 100%;
-  border-top-right-radius: 100%;
   cursor: pointer;
   padding: 10px;
   font-size: 20px;
@@ -27,9 +26,9 @@ button:hover {
 }
 
 .tabPanel {
-  width: 100%;
+  width: 99%;
   height: 650px;
-  background: gray;
+  filter: opacity(50%);
   color: white;
   text-align: center;
   padding-top: 100px;
@@ -40,29 +39,38 @@ button:hover {
 }
 
 .searchContainer {
-  width: 35%;
-  height: 40px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: grey;
-  border-radius: 50px;
+  width: 100%;
+  height: 50px;
+  display: inline-block;
 }
 
 .searchText {
-  width: 80%;
+  width: 35%;
+  height: 50px;
+  font-size: 20pt;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  
 }
 
-.searchButton {
-  color: black;
-  float: right;
-  width: 400px;
-  height: 400px;
-  display: flex;
+.searchButton{
+  width: 4%;
+  height: 50px;
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
-  background: grey;
-  align-items: center;
-  justify-content: center;
 }
+.settingsBox button {
+  width: 100px;
+  height: 100px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+#here {
+  width: 1000px;
+  height: 100px;
+}
+
+
+
+
