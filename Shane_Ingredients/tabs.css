@@ -36,6 +36,7 @@ button:hover {
   font-size: 20pt;
   font-family: sans-serif;
   display: none;
+  background-image: url('batman.jpg');
 }
 
 .searchContainer {
