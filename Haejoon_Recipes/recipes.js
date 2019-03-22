@@ -5,8 +5,13 @@
     function ShowList(recipeName) {
       var recipeRef = firebase.database().ref("recipes/" + recipeName);
       $("#title b").html(recipeName);
-      var urlRef = recipeRef.toJSON();
-      console.log(urlRef);
+
+      recipeRef.once("value", function (snapshot) {
+        var data = snapshot.val();
+      }).then(function (data) {
+        console.log(typeof data);
+
+      });
 
       var ingreRef = recipeRef.child("ingredients-list");
       var promise = ingreRef.once("value", function (snap) {

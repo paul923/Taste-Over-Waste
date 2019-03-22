@@ -1,7 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <title>Fridge Project</title>
+  <head>
   <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBmkcN2V9VtYome1TD3A3WFUQGhvkOPtAo",
+      authDomain: "projectone-2e3bf.firebaseapp.com",
+      databaseURL: "https://projectone-2e3bf.firebaseio.com",
+      projectId: "projectone-2e3bf",
+      storageBucket: "projectone-2e3bf.appspot.com",
+      messagingSenderId: "851881954801"
+    };
+    firebase.initializeApp(config);
+  </script>
   <style>
     body {
       font-size: 15pt;
@@ -21,9 +35,11 @@
       background-color: #7a7a52;
       vertical-align: middle;
     }
-    #navBar ul li{
+
+    #navBar ul li {
       vertical-align: bottom;
     }
+
     #menu {
       text-align: center;
     }
@@ -66,23 +82,31 @@
     }
   </style>
 
-  <body>
-    <div id="container">
-      <nav id="navBar">
 
-        <ul id="menu">
-          <li>RECIPES</li>
-          <li>REFRIDGERATOR</li>
-          <li>INGREDIENTS</li>
-        </ul>
-      </nav>
-      <p>BACKGROUND</p>
-      <div id="search">SEARCH BAR</div>
-      <div id="message">MESSAGE OF THE DAY</div>
-      <p>BACKGROUND</p>
-      <div id="setting">SETTING ICON</div>
-      <footer>FOOTER STUFF</footer>
-    </div>
-  </body>
+  <title>Fridge Project</title>
+</head>
+
+
+<body>
+  <div id="container">
+    <nav id="navBar">
+
+      <ul id="menu">
+        <li>RECIPES</li>
+        <li>REFRIDGERATOR</li>
+        <li>INGREDIENTS</li>
+      </ul>
+    </nav>
+    <p>BACKGROUND</p>
+    <div id="search">SEARCH BAR</div>
+    <div id="message">MESSAGE OF THE DAY</div>
+    <p>BACKGROUND</p>
+    <div id="setting">SETTING ICON</div>
+    <footer>FOOTER STUFF</footer>
+  </div>
+
+  <script src="ingredients.js"></script>
+
+</body>
 
 </html>
