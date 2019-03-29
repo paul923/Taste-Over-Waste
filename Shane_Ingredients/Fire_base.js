@@ -1,22 +1,24 @@
-var tabButtons = document.querySelectorAll("button");
-var tabPanel = document.querySelectorAll(".tabPanel");
+$(document).ready(function () {
+  ShowList("apple");
+});
 
-function showPanel(panelIndex, colorCode) {
-  tabButtons.forEach(function (node) {
-    node.style.backgroundColor = "";
-    node.style.color = "";
-  });
-  tabButtons[panelIndex].style.backgroundColor = colorCode;
-  tabButtons[panelIndex].style.color = "white";
 
-  tabPanel.forEach(function (node) {
-    node.style.display = "none";
+function ShowList(ingredients) {
+  var ingredientsRef = firebase.database().ref("ingredients/" + ingredients);
+  $(".resultsText").html(ingredients);
+
+
+  var promise = ingredientsRef.once("value", function (snap) {
+    list = snap.val();
   });
-  tabPanel[panelIndex].style.display = "block";
-  tabPanel[panelIndex].style.backgroundColor = colorCode;
+
+  promise.then(function () {
+    DisplayIngredients(list);
+  });
 }
-showPanel(1, '#4dd2ff');
 
-    
-          
+function DisplayIngredients(list) {
+  console.log(list);
+
+}
 

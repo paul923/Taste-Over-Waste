@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tabs</title>
-    <link rel="stylesheet" type="text/css" href="tabs.css">
+    <link rel="stylesheet" type="text/css" href="Ingredients_Search.css">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
@@ -47,39 +47,85 @@
 
       <!------------------------------- SEARCH BAR CONTAINER----------------------------------->
       <div class="searchContainer">
-
         <div class="searchFieldBox">
           <input type="search" class="searchField" placeholder="  Search..." />
         </div>
-
         <div class="searchButtonBox">
-          <button id="search" class="searchButton" type="submit"><i class="fa fa-search"></i></button>
+          <button id="search" class="searchButton" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
         </div>
-        
-      <div id="results"></div>
-
+        <div id="resultsPanel">
+          <div class="blank"></div>
+          <div class="resultsBox">
+            <div class="resultsText"></div>
+            <div class="addMinusBox">
+              <button>-</button>
+              <button>+</button>
+            </div>
+          </div>
+          <div class="resultsBox">
+            <div class="resultsText"></div>
+            <div class="addMinusBox">
+              <button>-</button>
+              <button>+</button>
+            </div>
+          </div>
+          <div class="resultsBox">
+            <div class="resultsText"></div>
+            <div class="addMinusBox">
+              <button>-</button>
+              <button>+</button>
+            </div>
+          </div>
+          <div class="resultsBox">
+            <div class="resultsText"></div>
+            <div class="addMinusBox">
+              <button>-</button>
+              <button>+</button>
+            </div>
+          </div>
+          <div class="resultsBox">
+            <div class="resultsText"></div>
+            <div class="addMinusBox">
+              <button>-</button>
+              <button>+</button>
+            </div>
+          </div>
+         
+         
+        </div>
       </div>
 
     </div>
-    <div class="tabPanel"></div>
-    <div class="tabPanel">Settings Panel</div>
+    <div class="tabPanel">
+      <div class="optionsBox">
+        <button>OPTION BUTTON</button>
+      </div>
+      <div class="optionsBox">
+        <button>OPTION BUTTON</button>
+      </div>
+      <div class="optionsBox">
+        <button>OPTION BUTTON</button>
+      </div>
+      <div class="optionsBox">
+        <button>OPTION BUTTON</button>
+      </div>
+    </div>
 
     <!---------------------------------- SETTING ICON CONTAINER ------------------------------>
-    <div class="buttonsContainer">
-
-
-        <div class="settingsBox">
-          <button onclick="showPanel(4,'#5c5c8a')"><i id="cog" class="fas fa-cog fa-4x"></i></button>
-
+    <div id="settingsContainer" class="buttonsContainer">
+      <div class="settingsBox">
+        <button id="settingsBut" onclick="showPanel(3,'#5c5c8a')">
+          <i id="cog" class="fas fa-cog fa-4x"></i>
+        </button>
       </div>
     </div>
-    <footer>
-
-    </footer>
 
 
-    <script src="ingredients.js"></script>
-    <script src="tabs.js"></script>
+
+    <script src="Fire_Base.js"></script>
+    <script src="Ingredients_Search.js"></script>
 
   </body>
 

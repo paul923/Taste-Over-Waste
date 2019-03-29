@@ -1,27 +1,22 @@
-$(document).ready(function () {
-  ShowList("apple");
-});
+var tabButtons = document.querySelectorAll("button");
+var tabPanel = document.querySelectorAll(".tabPanel");
+
+function showPanel(panelIndex, colorCode) {
+  tabButtons.forEach(function (node) {
+    node.style.backgroundColor = "";
+    node.style.color = "";
+  });
+  tabButtons[panelIndex].style.backgroundColor = colorCode;
+  tabButtons[panelIndex].style.color = "white";
+
+  tabPanel.forEach(function (node) {
+    node.style.display = "none";
+  });
+  tabPanel[panelIndex].style.display = "block";
+  tabPanel[panelIndex].style.backgroundColor = colorCode;
+}
+showPanel(1, '#4dd2ff');
 
 $("#search").click(function(){
-              $("#results").show(350);
+              $("#resultsPanel").show(350);
           });
-
-function ShowList(ingredients) {
-  var ingredientsRef = firebase.database().ref("ingredients/" + ingredients);
-  $("#results").html(ingredients);
-
-  var promise = ingredientsRef.once("value", function (snap) {
-    list = snap.val();
-  });
-
-  promise.then(function () {
-    DisplayIngredients(list);
-  });
-}
-
-function DisplayIngredients(list) {
-  console.log(list);
-
-
-}
-
