@@ -16,7 +16,7 @@
   cursor: pointer;
   font-size: 20px;
   font-family: sans-serif;
-  filter: opacity(50%);
+  filter: opacity(70%);
 
 }
 
@@ -27,7 +27,7 @@ button:hover {
 .tabPanel {
   width: 1440px;
   height: 600px;
-  filter: opacity(50%);
+  filter: opacity(70%);
   color: white;
   outline: none;
   text-align: center;
