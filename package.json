@@ -1,0 +1,28 @@
+{
+  "name": "food-waste",
+  "version": "1.0.0",
+  "description": "Food waste npm initialization",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "jsdom": "^14.0.0",
+    "node": "^11.12.0",
+    "nodemon": "^1.18.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "foodwaste",
+    "web-application",
+    "project"
+  ],
+  "author": "HaejoonChoi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paul923/Food-Waste/issues"
+  },
+  "homepage": "https://github.com/paul923/Food-Waste#readme"
+}
