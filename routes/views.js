@@ -16,6 +16,15 @@ router.get('/', function(req, res, next) {
   res.send(html);
 });
 
+router.get('/main', function(req, res, next) {
+  var html = fs.readFileSync(path.resolve(__dirname, '../views/Ingredients_Search.html'), 'utf8');
+  res.send(html);
+});
+
+router.get('/css', function(req, res, next) {
+  var html = fs.readFileSync(path.resolve(__dirname, '../public/css/'), 'utf8');
+  res.send(html);
+});
 // get JSON test
 // router.get('/JSON', function(req, res, next) {
 //   res.send(myJSON.oob);
