@@ -1,22 +1,35 @@
+#wrapper {
+  width: 1440px;
+  height: 750px;
+  background: url(background2.jpg);
+  background-size: cover;
+}
+
 .tabsContainer {
   width: 1440px;
-  height: 50px;
+  height: 100px;
 }
 
 .buttonsContainer {
-  height: 50px;
+  height: 100px;
 }
 
 .buttonsContainer button {
-  width: 480px;
-  height: 50px;
+  width: 300px;
+  height: 80px;
+  margin-left: 90px;
+  margin-right: 90px;
+  margin-top: 20px;
+  background-image: url(buttonsBG.png);
   float: left;
-  border: none;
+  border-image-outset: 10px;
   outline: none;
   cursor: pointer;
-  font-size: 20px;
-  font-family: sans-serif;
-  filter: opacity(70%);
+  font-size: 25pt;
+  font-family: 'Baloo Chettan', cursive;
+  font-weight: bold;
+  border-radius: 20px;
+  color: white;
 
 }
 
@@ -26,8 +39,7 @@ button:hover {
 
 .tabPanel {
   width: 1440px;
-  height: 600px;
-  filter: opacity(70%);
+  height: 520px;
   color: white;
   outline: none;
   text-align: center;
@@ -38,11 +50,14 @@ button:hover {
   font-size: 20pt;
   font-family: sans-serif;
   display: none;
+
+  background-size: cover;
 }
 
 .searchContainer {
   width: 1440px;
   height: 50px;
+  margin-top: 50px;
   display: inline-block;
   text-align: center;
 }
@@ -51,7 +66,7 @@ button:hover {
   width: 700px;
   height: 50px;
   display: inline-block;
-  margin-right: -12px;
+  margin-right: -9px;
   padding: 0;
 }
 
@@ -82,14 +97,21 @@ button:hover {
   padding: 0;
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
+  border: 1px solid black;
 }
 
 #resultsPanel {
   width: 660px;
   height: 350px;
-  background-color: purple;
+  background-image: url(resultsBG.png);
+  border: 10px;
+  border-image-outset: 10px;
+  margin-top: 2px;
   transform: translateX(370px);
   display: none;
+  filter: opacity(80%);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .resultsBox {
@@ -129,32 +151,40 @@ button:hover {
   height: 50px;
   display: block;
 }
+
 #settingsContainer {
   width: 1440px;
   height: 200px;
 }
+
 .settingsBox {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 70px;
 }
 
 .settingsBox button {
   width: 100px;
   height: 100px;
-  border: none;
-  float: left;
-  border: none;
+  color: white;
+  margin-left: 20px;
+  margin-top: -00px;
+  border-image-outset: 20px;
+  background-image: url(buttonsBG.png);
   outline: none;
+  font-size: 10pt;
+  border-radius: 50%;
 }
 
 .optionsBox {
   width: 1440px;
   height: 70px;
 }
+
 .optionsBox button {
   width: 400px;
   height: 50px;
   border-radius: 20px;
   font-size: 20pt;
-}
+    font-family: 'Baloo Chettan', cursive;
 
+}

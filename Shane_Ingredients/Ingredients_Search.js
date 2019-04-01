@@ -7,16 +7,15 @@ function showPanel(panelIndex, colorCode) {
     node.style.color = "";
   });
   tabButtons[panelIndex].style.backgroundColor = colorCode;
-  tabButtons[panelIndex].style.color = "white";
+  tabButtons[panelIndex].style.color = "black";
 
   tabPanel.forEach(function (node) {
     node.style.display = "none";
   });
   tabPanel[panelIndex].style.display = "block";
-  tabPanel[panelIndex].style.backgroundColor = colorCode;
 }
-showPanel(1, '#4dd2ff');
+showPanel(1, '');
 
 $("#search").click(function(){
-              $("#resultsPanel").show(350);
+              $("#resultsPanel").toggle(350);
           });

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Taste Dont Waste</title>
     <link rel="stylesheet" type="text/css" href="Ingredients_Search.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -22,32 +22,35 @@
         messagingSenderId: "851881954801"
       };
       firebase.initializeApp(config);
+
     </script>
 
   </head>
 
 
   <body>
-    <div class="tabsContainer">
+    <div id="wrapper">
 
-      <div class="buttonsContainer">
+      <div class="tabsContainer">
+        
+        
+        <div class="buttonsContainer">
+          
+          <button onclick="showPanel(0,'#a3a3c2', '40pt')">Recipes</button>
+          <button onclick="showPanel(1,'#a3a3c2')">Refrigerator</button>
+          <button onclick="showPanel(2,'#a3a3c2')">Ingredients</button>
+        </div>
 
-        <button onclick="showPanel(0,'#cca300')">Recipes</button>
-        <button onclick="showPanel(1,'#4dd2ff')">Refrigerator</button>
-        <button onclick="showPanel(2,'#408000')">Ingredients</button>
       </div>
 
-    </div>
-
-    <div class="tabPanel">Recipes Content</div>
-    <div class="tabPanel">Refrigerator Content</div>
-    <div id="searchPanel">
+      <div class="tabPanel">Recipes Content</div>
+      <div class="tabPanel">Refrigerator Content</div>
       <div class="tabPanel">
 
         <!------------------------------- SEARCH BAR CONTAINER----------------------------------->
         <div class="searchContainer">
           <div class="searchFieldBox">
-            <input type="search" class="searchField" placeholder="  Search..." />
+            <input type="text" class="searchField" placeholder="  Search..." />
           </div>
           <div class="searchButtonBox">
             <button id="search" class="searchButton" type="submit">
@@ -91,36 +94,37 @@
                 <button>+</button>
               </div>
             </div>
-
-
           </div>
         </div>
       </div>
-    </div>
-    <div class="tabPanel">
-      <div class="optionsBox">
-        <button>OPTION BUTTON</button>
-      </div>
-      <div class="optionsBox">
-        <button>OPTION BUTTON</button>
-      </div>
-      <div class="optionsBox">
-        <button>OPTION BUTTON</button>
-      </div>
-      <div class="optionsBox">
-        <button>OPTION BUTTON</button>
-      </div>
-    </div>
 
-    <!---------------------------------- SETTING ICON CONTAINER ------------------------------>
-    <div id="settingsContainer" class="buttonsContainer">
-      <div class="settingsBox">
-        <button id="settingsBut" onclick="showPanel(3,'#5c5c8a')">
-          <i id="cog" class="fas fa-cog fa-4x"></i>
-        </button>
+      <div class="tabPanel">
+        <div class="optionsBox">
+          <button>Upgrade Account</button>
+        </div>
+        <div class="optionsBox">
+          <button>Edit Profile</button>
+        </div>
+        <div class="optionsBox">
+          <button>About</button>
+        </div>
+        <div class="optionsBox">
+          <button>Help</button>
+        </div>
+        <div class="optionsBox">
+          <button>Leave Feedback</button>
+        </div>
+      </div>
+
+      <!---------------------------------- SETTING ICON CONTAINER ------------------------------>
+      <div id="settingsContainer">
+        <div class="settingsBox">
+          <button onclick="showPanel(3,'#a3a3c2')">
+            <i id="cog" class="fas fa-cog fa-4x"></i>
+          </button>
+        </div>
       </div>
     </div>
-
 
 
     <script src="Fire_Base.js"></script>
