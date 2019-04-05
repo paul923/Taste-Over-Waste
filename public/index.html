@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+    
+    <!-- update the version number as needed -->
+    <script src="/__/firebase/5.9.2/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script src="/__/firebase/5.9.2/firebase-auth.js"></script>
+    <script src="/__/firebase/5.9.2/firebase-database.js"></script>
+    <script defer src="/__/firebase/5.9.2/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/5.9.2/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script src="/__/firebase/init.js"></script>
+
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+  
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+
+    <script>    
+    // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyBmkcN2V9VtYome1TD3A3WFUQGhvkOPtAo",
+        authDomain: "projectone-2e3bf.firebaseapp.com",
+        databaseURL: "https://projectone-2e3bf.firebaseio.com",
+        projectId: "projectone-2e3bf",
+        storageBucket: "projectone-2e3bf.appspot.com",
+        messagingSenderId: "851881954801"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+    </style>
+  </head>
+  <body>
+
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
+          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+       <!-- The surrounding HTML is left untouched by FirebaseUI.
+     Your app may use that space for branding, controls and other customizations.-->
+     <h1>Welcome to Food over Waste! Please Log in</h1>
+     <div id="firebaseui-auth-container"></div>
+     <div id="loader">Loading...</div>
+     <script>
+       // Initialize the FirebaseUI Widget using Firebase.
+       var ui = new firebaseui.auth.AuthUI(firebase.auth());
+ 
+       var uiConfig = {
+       callbacks: {
+         signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+           // User successfully signed in.
+           // Return type determines whether we continue the redirect automatically
+           // or whether we leave that to developer to handle.
+           return true;
+         },
+         uiShown: function() {
+           // The widget is rendered.
+           // Hide the loader.
+           document.getElementById('loader').style.display = 'none';
+         }
+       },
+       // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+       signInFlow: 'popup',
+       signInSuccessUrl: '../views/Fridge.html',
+       signInOptions: [
+         // Leave the lines as is for the providers you want to offer your users.
+         firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+         firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+         firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+         firebase.auth.GithubAuthProvider.PROVIDER_ID,
+         firebase.auth.EmailAuthProvider.PROVIDER_ID,
+         firebase.auth.PhoneAuthProvider.PROVIDER_ID
+       ],
+       // Terms of service url.
+       tosUrl: 'views/Fridge.html',
+       // Privacy policy url.
+       privacyPolicyUrl: 'views/Fridge.html'
+     };
+       // The start method will wait until the DOM is loaded.
+       ui.start('#firebaseui-auth-container', uiConfig);
+     </script>
+  
+  </body>
+</html>
