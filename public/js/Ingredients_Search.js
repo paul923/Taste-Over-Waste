@@ -16,6 +16,30 @@ function showPanel(panelIndex, colorCode) {
 }
 showPanel(1, '');
 
-$("#search").click(function(){
-              $("#resultsPanel").toggle(350);
-          });
+$("#search").click(function () {
+  $("#resultsPanel").toggle(350);
+});
+
+function searchFunction() {
+  var input, filter, ul, li, a, i, msgs;
+  input = document.getElementById('userInput');
+  inputCase = input.value.toUpperCase();
+  ul = document.getElementById('listBox');
+  li = ul.getElementsByTagName('li');
+  msgs = document.getElementById('msg');
+
+  for (i = 0; i < li.length; i++) {
+    p = li[i].getElementsByTagName('p')[0];
+    
+    if (input.value.length == 0) {
+      li[i].style.display = 'none';
+      msg.style.display = 'block';
+    }
+    else if (p.innerHTML.toUpperCase().indexOf(inputCase) > -1) {
+      li[i].style.display = 'block';
+      msgs.style.display = 'none';
+    } else {
+      li[i].style.display = 'none';
+    }
+  }
+}

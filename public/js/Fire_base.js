@@ -5,7 +5,7 @@ $(document).ready(function () {
 
 function ShowList(ingredients) {
   var ingredientsRef = firebase.database().ref("ingredients/" + ingredients);
-  $(".resultsText").html(ingredients);
+  $(".").html(ingredients);
 
 
   var promise = ingredientsRef.once("value", function (snap) {

@@ -1,7 +1,7 @@
 #wrapper {
   width: 1440px;
   height: 750px;
-  background: url(/images/background2.jpg);
+  background: url(/public/images/background2.jpg);
   background-size: cover;
 }
 
@@ -20,7 +20,7 @@
   margin-left: 90px;
   margin-right: 90px;
   margin-top: 20px;
-  background-image: url(/images/buttonsBG.png);
+  background-color: #B2B2B1;
   float: left;
   border-image-outset: 10px;
   outline: none;
@@ -62,94 +62,98 @@ button:hover {
   text-align: center;
 }
 
-.searchFieldBox {
-  width: 700px;
-  height: 50px;
+.searchBar {
   display: inline-block;
-  margin-right: -9px;
-  padding: 0;
+  left: 50%;
+  top 8px;
+  width: 500px;
+  height: 65px;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
-.searchField {
-  width: 700px;
-  height: 50px;
-  margin: 0;
-  padding: 0;
+input {
+  position: absolute;
+  left: 50%;
+  width: 400px;
+  height: 60px;
+  left: 50px;
+  margin-top: 4px;
+  margin-left: 22%;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
   font-size: 20pt;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
-
+  font-weight: 400;
 }
 
-.searchButtonBox {
+#msg {
+  width: 400px;
+  height: 200px;
+  margin-left: 520px;
+  margin-top: 50px;
+  color: black;
+  font-family: 'Baloo Chettan', serif;
+  font-size: 30pt;
+}
+#results {
+  width: 500px;
+  height: 400px;
+  margin-left: 470px;
+  margin-top: -30px;
+  margin-bottom: -10px;
+  float: left;
+}
+
+ul#listBox {
+  background-color: white;
+  width: 460px;
+  height: auto;
+  max-height: 400px;
+  list-style: none;
   display: inline-block;
-  width: 60px;
-  height: 50px;
-  margin: 0;
-  padding: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
 }
 
-.searchButton {
+li {
+  width: 472px;
+  height: 70px;
+  float: left;
+  margin-left: -40px;
+  background: white;
+  text-align: left;
+  text-indent: 20px;
+  display: none;
+
+}
+li:hover {
+  background-color: #a3a3c2;
+}
+
+.add {
   width: 50px;
   height: 50px;
-  font-size: 20pt;
-  border: 0;
-  padding: 0;
-  border-top-right-radius: 50%;
-  border-bottom-right-radius: 50%;
-  border: 1px solid black;
-}
-
-#resultsPanel {
-  width: 660px;
-  height: 350px;
-  background-image: url(/images/resultsBG.png);
-  border: 10px;
-  border-image-outset: 10px;
-  margin-top: 2px;
-  transform: translateX(370px);
-  display: none;
-  filter: opacity(80%);
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-}
-
-.resultsBox {
-  width: 660px;
-  height: 50px;
-  display: block;
-}
-
-.resultsText {
-  width: 60%;
-  height: 50px;
-  line-height: 36pt;
-  text-align: left;
-  margin-left: 15%;
-  float: left;
-  display: inline;
-}
-
-.addMinusBox {
-  width: 25%;
-  height: 50px;
-  font-size: 10pt;
-  float: left;
-  display: inline;
-}
-
-#resultsPanel button {
-  width: 40px;
-  height: 30px;
-  font-size: 30pt;
   margin-top: 10px;
-  line-height: 0;
+  font-size: 25pt;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  float: left;
 }
-
-.blank {
-  width: 100%;
-  height: 50px;
-  display: block;
+.add:hover {
+  background-color: grey;
+}
+p {
+  font-size: 20pt;
+  width: 420px;
+  height: 70px;
+  color: black;
+  text-decoration: none;
+  line-height: 15px;
+  float: left;
 }
 
 #settingsContainer {
@@ -169,7 +173,7 @@ button:hover {
   margin-left: 20px;
   margin-top: -00px;
   border-image-outset: 20px;
-  background-image: url(/images/buttonsBG.png);
+  background-image: url(/public/images/buttonsBG.png);
   outline: none;
   font-size: 10pt;
   border-radius: 50%;
@@ -185,6 +189,6 @@ button:hover {
   height: 50px;
   border-radius: 20px;
   font-size: 20pt;
-    font-family: 'Baloo Chettan', cursive;
+  font-family: 'Baloo Chettan', cursive;
 
 }

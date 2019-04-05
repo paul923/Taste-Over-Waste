@@ -5,11 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Taste Dont Waste</title>
-    <link rel="stylesheet" type="text/css" href="/css/Ingredients_Search.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/Ingredients_Search.css">
     <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
     <script>
       // Initialize Firebase
@@ -22,7 +23,6 @@
         messagingSenderId: "851881954801"
       };
       firebase.initializeApp(config);
-
     </script>
 
   </head>
@@ -32,10 +32,10 @@
     <div id="wrapper">
 
       <div class="tabsContainer">
-        
-        
+
+
         <div class="buttonsContainer">
-          
+
           <button onclick="showPanel(0,'#a3a3c2', '40pt')">Recipes</button>
           <button onclick="showPanel(1,'#a3a3c2')">Refrigerator</button>
           <button onclick="showPanel(2,'#a3a3c2')">Ingredients</button>
@@ -49,52 +49,79 @@
 
         <!------------------------------- SEARCH BAR CONTAINER----------------------------------->
         <div class="searchContainer">
-          <div class="searchFieldBox">
-            <input type="text" class="searchField" placeholder="  Search..." />
+
+
+          <div class="searchBar">
+            <input type="text" name="search" value="" autocomplete="off" id="userInput" onkeyup="searchFunction()" placeholder="Search...">
+
           </div>
-          <div class="searchButtonBox">
-            <button id="search" class="searchButton" type="submit">
-              <i class="fa fa-search"></i>
-            </button>
+          <div id="msg">
+            What Delicious Ingredients Did You Buy Today??
           </div>
-          <div id="resultsPanel">
-            <div class="blank"></div>
-            <div class="resultsBox">
-              <div class="resultsText"></div>
-              <div class="addMinusBox">
-                <button>-</button>
-                <button>+</button>
-              </div>
-            </div>
-            <div class="resultsBox">
-              <div class="resultsText"></div>
-              <div class="addMinusBox">
-                <button>-</button>
-                <button>+</button>
-              </div>
-            </div>
-            <div class="resultsBox">
-              <div class="resultsText"></div>
-              <div class="addMinusBox">
-                <button>-</button>
-                <button>+</button>
-              </div>
-            </div>
-            <div class="resultsBox">
-              <div class="resultsText"></div>
-              <div class="addMinusBox">
-                <button>-</button>
-                <button>+</button>
-              </div>
-            </div>
-            <div class="resultsBox">
-              <div class="resultsText"></div>
-              <div class="addMinusBox">
-                <button>-</button>
-                <button>+</button>
-              </div>
-            </div>
+          <div id="results">
+            <ul id="listBox">
+              <li class="lists">
+                <p>Chicken Wings</p>
+                <button class="add">+</button>
+              </li>
+              <li class="lists">
+                <p>Whole Chicken</p>
+                <button class="add">+</button>
+              </li>
+              <li class="lists">
+                <p>Chicken Thighs</p>
+                <button class="add">+</button>
+              </li>
+              <li class="lists">
+                <p>Chicken Drumsticks</p>
+                <button class="add">+</button>
+              </li>
+              <li class="lists">
+                <p>Celery</p>
+                <button class="add">+</button>
+              </li>
+              <li class="lists">
+                <p>Advacado</p>
+                <button class="add">+</button>
+              </li>
+              <li class="lists">
+                <p>Green Bean</p>
+                <button class="add">+</button>
+              </li>
+              <li class="lists">
+                <p>Sirlion Steak</p>
+                <button class="add">+</button>
+              </li>
+              <li class="lists">
+                <p>Ground Pork</p>
+                <button class="add">+</button>
+              </li>
+              <li class="lists">
+                <p>Salmon Fillet</p>
+                <button class="add">+</button>
+              </li>
+              <li class="lists">
+                <p>Onions</p>
+                <button class="add">+</button>
+              </li>
+              <li class="lists">
+                <p>Spinach</p>
+                <button class="add">+</button>
+              </li>
+              <li class="lists">
+                <p>Brocolli</p>
+                <button class="add">+</button>
+              </li>
+              <li class="lists">
+                <p>Carrots</p>
+                <button class="add">+</button>
+              </li>
+
+            </ul>
           </div>
+
+         
+          
         </div>
       </div>
 
@@ -127,8 +154,8 @@
     </div>
 
 
-    <script src="/js/Fire_base.js"></script>
-    <script src="/js/Ingredients_Search.js"></script>
+    <script src="/public/js/Fire_base.js"></script>
+    <script src="/public/js/Ingredients_Search.js"></script>
 
   </body>
 
