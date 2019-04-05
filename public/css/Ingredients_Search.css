@@ -1,7 +1,7 @@
 #wrapper {
   width: 1440px;
   height: 750px;
-  background: url(/images/background2.jpg);
+  background: url(/public/images/background2.jpg);
   background-size: cover;
 }
 
@@ -172,7 +172,7 @@ p {
   margin-left: 20px;
   margin-top: -00px;
   border-image-outset: 20px;
-  background-image: url(/images/buttonsBG.png);
+  background-image: url(/public/images/buttonsBG.png);
   outline: none;
   font-size: 10pt;
   border-radius: 50%;
