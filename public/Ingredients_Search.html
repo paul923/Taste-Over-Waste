@@ -1,161 +1,202 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Taste Dont Waste</title>
-    <link rel="stylesheet" type="text/css" href="/css/Ingredients_Search.css">
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Taste Dont Waste</title>
+  <link rel="stylesheet" type="text/css" href="/css/Ingredients_Search.css">
+  <link rel="stylesheet" type="text/css" href="/css/recipes.css">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
-    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyBmkcN2V9VtYome1TD3A3WFUQGhvkOPtAo",
-        authDomain: "projectone-2e3bf.firebaseapp.com",
-        databaseURL: "https://projectone-2e3bf.firebaseio.com",
-        projectId: "projectone-2e3bf",
-        storageBucket: "projectone-2e3bf.appspot.com",
-        messagingSenderId: "851881954801"
-      };
-      firebase.initializeApp(config);
-    </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-  </head>
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBmkcN2V9VtYome1TD3A3WFUQGhvkOPtAo",
+      authDomain: "projectone-2e3bf.firebaseapp.com",
+      databaseURL: "https://projectone-2e3bf.firebaseio.com",
+      projectId: "projectone-2e3bf",
+      storageBucket: "projectone-2e3bf.appspot.com",
+      messagingSenderId: "851881954801"
+    };
+    firebase.initializeApp(config);
+  </script>
 
-
-  <body>
-    <div id="wrapper">
-
-      <div class="tabsContainer">
+</head>
 
 
-        <div class="buttonsContainer">
+<body>
+  <div id="wrapper">
 
-          <button onclick="showPanel(0,'#a3a3c2', '40pt')">Recipes</button>
-          <button onclick="showPanel(1,'#a3a3c2')">Refrigerator</button>
-          <button onclick="showPanel(2,'#a3a3c2')">Ingredients</button>
-        </div>
+    <div class="tabsContainer">
 
+
+      <div class="buttonsContainer">
+
+        <button onclick="showPanel(0,'#a3a3c2', '40pt')">Recipes</button>
+        <button onclick="showPanel(1,'#a3a3c2')">Refrigerator</button>
+        <button onclick="showPanel(2,'#a3a3c2')">Ingredients</button>
       </div>
 
-      <div class="tabPanel">Recipes Content</div>
-      <div class="tabPanel">Refrigerator Content</div>
-      <div class="tabPanel">
+    </div>
 
-        <!------------------------------- SEARCH BAR CONTAINER----------------------------------->
-        <div class="searchContainer">
+    <div class="tabPanel">
+      <!-- Content -->
+      <div class="content">
 
-
-          <div class="searchBar">
-            <input type="text" name="search" value="" autocomplete="off" id="userInput" onkeyup="searchFunction()" placeholder="Search...">
-
-          </div>
-          <div id="msg">
-            What Delicious Ingredients Did You Buy Today??
-          </div>
-          <div id="results">
-            <ul id="listBox">
-              <li class="lists">
-                <p>Chicken Wings</p>
-                <button class="add">+</button>
-              </li>
-              <li class="lists">
-                <p>Whole Chicken</p>
-                <button class="add">+</button>
-              </li>
-              <li class="lists">
-                <p>Chicken Thighs</p>
-                <button class="add">+</button>
-              </li>
-              <li class="lists">
-                <p>Chicken Drumsticks</p>
-                <button class="add">+</button>
-              </li>
-              <li class="lists">
-                <p>Celery</p>
-                <button class="add">+</button>
-              </li>
-              <li class="lists">
-                <p>Advacado</p>
-                <button class="add">+</button>
-              </li>
-              <li class="lists">
-                <p>Green Bean</p>
-                <button class="add">+</button>
-              </li>
-              <li class="lists">
-                <p>Sirlion Steak</p>
-                <button class="add">+</button>
-              </li>
-              <li class="lists">
-                <p>Ground Pork</p>
-                <button class="add">+</button>
-              </li>
-              <li class="lists">
-                <p>Salmon Fillet</p>
-                <button class="add">+</button>
-              </li>
-              <li class="lists">
-                <p>Onions</p>
-                <button class="add">+</button>
-              </li>
-              <li class="lists">
-                <p>Spinach</p>
-                <button class="add">+</button>
-              </li>
-              <li class="lists">
-                <p>Brocolli</p>
-                <button class="add">+</button>
-              </li>
-              <li class="lists">
-                <p>Carrots</p>
-                <button class="add">+</button>
-              </li>
-
-            </ul>
-          </div>
-
-         
-          
+        <div class="title-area">
+          <!--dish name fetched from the database-->
+          <h1 id="title"><b></b></h1>
         </div>
+
+        <div class="recipe-area">
+          <div id="video-area">
+            <div class="small-title">
+              <div id="video-title">Video Title</div>
+            </div>
+            <div id="iframe-container">
+              <!--Here goes video with the url fetched from the database-->
+            </div>
+          </div>
+          <div id="text-area">
+            <div id="text-block">
+              <div class="small-title">Main ingredients</div>
+              <div class="text-box">
+                <ul id="ingredients">
+                  <!--li fetched from the database-->
+                </ul>
+              </div>
+              <div class="small-title">Steps</div>
+              <div class="text-box">
+                <ol id="steps" type="1">
+                  <!--li fetched from the database-->
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
       </div>
+    </div>
+    <div class="tabPanel">Refrigerator Content</div>
+    <div class="tabPanel">
 
-      <div class="tabPanel">
-        <div class="optionsBox">
-          <button>Upgrade Account</button>
-        </div>
-        <div class="optionsBox">
-          <button>Edit Profile</button>
-        </div>
-        <div class="optionsBox">
-          <button>About</button>
-        </div>
-        <div class="optionsBox">
-          <button>Help</button>
-        </div>
-        <div class="optionsBox">
-          <button>Leave Feedback</button>
-        </div>
-      </div>
+      <!------------------------------- SEARCH BAR CONTAINER----------------------------------->
+      <div class="searchContainer">
 
-      <!---------------------------------- SETTING ICON CONTAINER ------------------------------>
-      <div id="settingsContainer">
-        <div class="settingsBox">
-          <button onclick="showPanel(3,'#a3a3c2')">
-            <i id="cog" class="fas fa-cog fa-4x"></i>
-          </button>
+
+        <div class="searchBar">
+          <input type="text" name="search" value="" autocomplete="off" id="userInput" onkeyup="searchFunction()"
+            placeholder="Search...">
+
         </div>
+        <div id="msg">
+          What Delicious Ingredients Did You Buy Today??
+        </div>
+        <div id="results">
+          <ul id="listBox">
+            <li class="lists">
+              <p>Chicken Wings</p>
+              <button class="add">+</button>
+            </li>
+            <li class="lists">
+              <p>Whole Chicken</p>
+              <button class="add">+</button>
+            </li>
+            <li class="lists">
+              <p>Chicken Thighs</p>
+              <button class="add">+</button>
+            </li>
+            <li class="lists">
+              <p>Chicken Drumsticks</p>
+              <button class="add">+</button>
+            </li>
+            <li class="lists">
+              <p>Celery</p>
+              <button class="add">+</button>
+            </li>
+            <li class="lists">
+              <p>Advacado</p>
+              <button class="add">+</button>
+            </li>
+            <li class="lists">
+              <p>Green Bean</p>
+              <button class="add">+</button>
+            </li>
+            <li class="lists">
+              <p>Sirlion Steak</p>
+              <button class="add">+</button>
+            </li>
+            <li class="lists">
+              <p>Ground Pork</p>
+              <button class="add">+</button>
+            </li>
+            <li class="lists">
+              <p>Salmon Fillet</p>
+              <button class="add">+</button>
+            </li>
+            <li class="lists">
+              <p>Onions</p>
+              <button class="add">+</button>
+            </li>
+            <li class="lists">
+              <p>Spinach</p>
+              <button class="add">+</button>
+            </li>
+            <li class="lists">
+              <p>Brocolli</p>
+              <button class="add">+</button>
+            </li>
+            <li class="lists">
+              <p>Carrots</p>
+              <button class="add">+</button>
+            </li>
+
+          </ul>
+        </div>
+
+
+
       </div>
     </div>
 
+    <div class="tabPanel">
+      <div class="optionsBox">
+        <button>Upgrade Account</button>
+      </div>
+      <div class="optionsBox">
+        <button>Edit Profile</button>
+      </div>
+      <div class="optionsBox">
+        <button>About</button>
+      </div>
+      <div class="optionsBox">
+        <button>Help</button>
+      </div>
+      <div class="optionsBox">
+        <button>Leave Feedback</button>
+      </div>
+    </div>
 
-    <script src="/js/Fire_base.js"></script>
-    <script src="/js/Ingredients_Search.js"></script>
-  </body>
+    <!---------------------------------- SETTING ICON CONTAINER ------------------------------>
+    <div id="settingsContainer">
+      <div class="settingsBox">
+        <button onclick="showPanel(3,'#a3a3c2')">
+          <i id="cog" class="fas fa-cog fa-4x"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="/js/Fire_base.js"></script>
+  <script src="/js/Ingredients_Search.js"></script>
+</body>
 
 </html>
