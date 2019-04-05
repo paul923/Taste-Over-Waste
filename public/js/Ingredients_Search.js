@@ -21,7 +21,7 @@ $("#search").click(function () {
 });
 
 function searchFunction() {
-  var input, filter, ul, li, a, i, msgs;
+  var input, filter, ul, li, p, i, msgs;
   input = document.getElementById('userInput');
   inputCase = input.value.toUpperCase();
   ul = document.getElementById('listBox');
@@ -43,3 +43,18 @@ function searchFunction() {
     }
   }
 }
+
+var button1, button2, button3, button4, li;
+li = document.getElementsByClassName('lists');
+
+button1 = document.getElementsByClassName('add')[0];
+button2 = document.getElementsByClassName('add')[1];
+button3 = document.getElementsByClassName('add')[2];
+button4 = document.getElementsByClassName('add')[3];
+    
+button1.addEventListener("click", exportData1);
+button2.addEventListener("click", exportData2);
+button3.addEventListener("click", exportData3);
+button4.addEventListener("click", exportData4);
+    
+    
