@@ -56,3 +56,20 @@ function exportData4() {
   ref.push(data4);
   console.dir(data4);
 }
+
+// function exportData() {
+
+//   var test1 = $('#c1').textContent;
+//   console.log(test1);
+  
+//   ingredient. data.
+
+//   var data1 = {
+//     Name: ingredient('something').('name'),
+//     Quantity: 1,
+//     Expiration: '3 days'
+//   }
+//   ref.push(data1);
+//   console.dir(data1);
+
+// }

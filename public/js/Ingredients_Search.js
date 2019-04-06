@@ -21,21 +21,25 @@ $("#search").click(function () {
 });
 
 function searchFunction() {
-  var input, filter, ul, li, p, i, msgs;
-  input = document.getElementById('userInput');
-  inputCase = input.value.toUpperCase();
-  ul = document.getElementById('listBox');
-  li = ul.getElementsByTagName('li');
-  msgs = document.getElementById('msg');
+  var searchInput, searchInputCap, ul, li, p, i, msgs;
+  searchInput = document.getElementById('userInput');
+  searchInputCap = searchInput.value.toUpperCase();
+  ul = $('#listBox'); 
+  li = $('.lists');
+  console.log(li);
 
+  msgs = document.getElementById('msg'); // $("#msg")
+
+  p = $('.ingredientName');
+  console.log(p[1].innerHTML);
   for (i = 0; i < li.length; i++) {
-    p = li[i].getElementsByTagName('p')[0];
-    
-    if (input.value.length == 0) {
+
+    console.log(p[i]);
+    if (searchInput.value.length == 0) {
       li[i].style.display = 'none';
       msg.style.display = 'block';
     }
-    else if (p.innerHTML.toUpperCase().indexOf(inputCase) > -1) {
+    else if (p[i].innerHTML.toUpperCase().indexOf(searchInputCap) > -1) {
       li[i].style.display = 'block';
       msgs.style.display = 'none';
     } else {
@@ -55,14 +59,13 @@ for(i=0; i<buttons.length;i++){
 var button1, button2, button3, button4, li;
 li = document.getElementsByClassName('lists');
 
-button1 = document.getElementsByClassName('add')[0];
-button2 = document.getElementsByClassName('add')[1];
-button3 = document.getElementsByClassName('add')[2];
-button4 = document.getElementsByClassName('add')[3];
+
+var buttons = $(".add");
+for(i = 0, i < buttons.length ; i++;){
+  buttons[i].on("click", exportData1);
+
+}
+
     
-button1.addEventListener("click", exportData1);
-button2.addEventListener("click", exportData2);
-button3.addEventListener("click", exportData3);
-button4.addEventListener("click", exportData4);
-    
+
     
