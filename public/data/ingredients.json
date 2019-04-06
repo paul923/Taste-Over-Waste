@@ -1,0 +1,46 @@
+{
+  "ingredients": {
+    "0": {
+      "name":  "Chicken Wings"
+    },
+    "1": {
+      "name": "Whole Chicken"
+    },
+    "2": {
+      "name": "Chicken Thighs"
+    },
+    "3": {
+      "name": "Chicken Drumstick"
+    },
+    "4": {
+      "name": "Avocado"
+    },
+    "5": {
+      "name": "Green Bean"
+    },
+    "6": {
+      "name": "Sirlion Steak"
+    },
+    "7": {
+      "name": "Ground Pork"
+    },
+    "8": {
+      "name": "Celery"
+    },
+    "9": {
+      "name": "Salmon Fillet"
+    },
+    "10": {
+      "name": "Onions"
+    },
+    "11": {
+      "name": "Spinach"
+    },
+    "12": {
+      "name": "Brocolli"
+    },
+    "13": {
+      "name": "Carrots"
+    }
+  }
+}
