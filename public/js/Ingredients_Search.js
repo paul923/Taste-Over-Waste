@@ -5,9 +5,10 @@ var ingredients = fetch('data/ingredients.json').then(function (resp) {
   return resp.json();
 }).then(function (resp) {
   console.log(resp);
+  console.log(ingredients["0"].name);
+
 });
 
-console.log(ingredients['0']);
 
 
 var $result = $('#results');
