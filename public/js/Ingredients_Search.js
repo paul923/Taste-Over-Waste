@@ -77,6 +77,14 @@ function searchFunction() {
   }
 }
 
+var buttons = document.getElementByClassName('.add');
+var button;
+
+for(i=0; i<buttons.length;i++){
+  button[i] = document.getElementsByClassName('.add')[i];
+  button[i].addEventListener()
+}
+
 var button1, button2, button3, button4, li;
 li = document.getElementsByClassName('lists');
 
