@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+}
+
+#banner {
+  box-sizing: border-box;
+  background-image: url(Food-Waste/public/images/banner.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  height: 180px;
+  padding: 30px;
+}
+
+#logo {
+  width: 300px;
+}
+
+.navBar {
+  width: 100%;
+  background-color: white;
+  overflow: auto;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+.navBar a {
+  float: left;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  font-size: 17pt;
+  width: 50%;
+  text-align: center;
+}
+
+.navBar a:hover {
+  background-color: #FFB258;
+  color: white;
+  transition: 0.3s;
+}
+
+#menu1 {
+  border-right: 2px solid grey;
+}
+
+#fridgePanel {
+  background-color: #FFCBCB;
+  padding: 30px;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  z-index: 1;
+  display: inline-block;
+  text-align: center;
+}
+
+.content {
+  display: inline;
+}
+#fridge {
+  margin-left: ;
+}
+#blackboard {
+  margin-left: 100px;
+}
+#setting {
+  width: 50px;
+  float: right;
+  cursor: pointer;
+}
+
+/*********side menu**************/
+#sidebar {
+  width: 100px;
+}
+#hiddenMenu {
+  border-radius: 20px;
+  z-index: 3;
+  background-color: white;
+  width: 250px;
+  height: 300px;
+  border: 2px solid #FFB257;
+  position: absolute;
+}
+ul {
+  list-style: none;
+  padding-top: 30px;
+  padding-left: 0;
+  margin: 0;
+}
+
+.li {
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 15pt;
+  cursor: pointer;
+}
+.li:hover {
+  background-color: darkgrey;
+  transition: 0.3s;
+}
+#imageSide {
+  margin-left: 400px; 
+  width: 60%;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+#settingSide {
+  width: 250px;
+  height: auto;
+  float: right;
+  z-index: 3;
+}
+
+/*************panel2****************/
+.searchContainer {
+  width: 1440px;
+  height: 50px;
+  margin-top: 50px;
+  display: inline-block;
+  text-align: center;
+}
+
+.searchBar {
+  display: inline-block;
+  left: 50%;
+  top: 8px;
+  width: 500px;
+  height: 65px;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+input {
+  position: absolute;
+  width: 400px;
+  height: 60px;
+  left: 50px;
+  margin-top: 4px;
+  margin-left: 450px;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-size: 20pt;
+  font-weight: 400;
+}
+

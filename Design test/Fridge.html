@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport">
+    <title>Taste Dont Waste</title>
+    <link rel="stylesheet" type="text/css" href="Fridge.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+
+
+  <body>
+    <div id="wrapper">
+      <div id="banner"><img id="logo" src="Food-Waste/public/images/logo2.png"></div>
+      <nav>
+        <div class="navBar">
+          <a class="tabPanel" id="menu1" onclick="showPanel(0,'')">FRIDGE</a>
+          <a class="tabPanel" id="menu2" onclick="showPanel(1,'')">INGREDIENTS</a>
+        </div>
+      </nav>
+      
+      <div class="tabPanel" id="fridgePanel">
+        <div class="inner" id="imageSide">
+          <div id="left" class="content">
+            <img id="fridge" src="Food-Waste/public/images/Fridge.png">
+          </div>
+          <div id="right" class="content">
+            <img id="blackboard" src="Food-Waste/public/images/black%20board.png">
+          </div>
+          
+        </div>
+        <div class="inner" id="settingSide">
+          <a onclick="openNav()"><img id="setting" src="Food-Waste/public/images/setting_icon.png">
+          </a>
+          <div id="hiddenMenu">
+            <ul>
+              <li class="li">Upgrade Account</li>
+              <li class="li">Edit Profile</li>
+              <li class="li" onclick="showPanel(0,'')">About</li>
+              <li class="li" onclick="showPanel(0,'')">Help</li>
+              <li class="li" onclick="showPanel(0,'')">Leave Feedback</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="tabPanel" id="searchPanel">
+        <div class="searchContainer">
+          <div class="searchBar">
+            <input type="text" name="search" value="" autocomplete="off" id="userInput" onkeyup="searchFunction()" placeholder="Search...">
+          </div>
+          <div id="msg">
+            What Delicious Ingredients Did You Buy Today??
+          </div>
+          <div id="results">
+
+
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+    <script>
+      $(document).ready(function() {
+        $("#hiddenMenu").hide();
+
+        $("#setting").click(function(event) {
+          event.stopPropagation();
+          $("#hiddenMenu").slideToggle("blind");
+        });
+        $(document).click(function() {
+          $('#hiddenMenu').slideUp();
+        });
+      });
+    </script>
+    <script src="Fridge.js"></script>
+
+  </body>
+
+</html>
