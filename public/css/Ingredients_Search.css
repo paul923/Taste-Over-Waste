@@ -37,6 +37,9 @@ button:hover {
   background-color: #a3a3c2;
 }
 
+#cog {
+  font-size: 40pt;
+}
 .tabPanel {
   width: 1440px;
   height: 520px;
@@ -100,9 +103,10 @@ input {
   width: 500px;
   height: 400px;
   margin-left: 470px;
-  margin-top: -30px;
+  margin-top: -10px;
   margin-bottom: -10px;
   float: left;
+  background-color: black;
 }
 
 ul#listBox {
@@ -118,10 +122,9 @@ ul#listBox {
 }
 
 li {
-  width: 472px;
+  width: 500px;
   height: 70px;
   float: left;
-  margin-left: -40px;
   background: white;
   text-align: left;
   text-indent: 20px;
@@ -166,5 +169,14 @@ p {
   border-radius: 20px;
   font-size: 20pt;
   font-family: 'Baloo Chettan', cursive;
+
+}
+
+#fridge {
+  width: 400px;
+  height: 500px;
+  border-radius: 20px;
+  position: absolute;
+  margin-left: -100px;
 
 }

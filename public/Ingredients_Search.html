@@ -30,10 +30,9 @@
 
 </head>
 
-
 <body>
   <div id="wrapper">
-
+    <!--------------------TABS BUTTONS-------------------------->
     <div class="tabsContainer">
       <div class="buttonsContainer">
         <button onclick="showPanel(0,'#a3a3c2')">Refrigerator</button>
@@ -43,12 +42,16 @@
         </button>
       </div>
     </div>
+
+    <!-----------------------FRIDGE PANEL------------------------------------->
     <div class="tabPanel">
-      <img alt="" id="fridge" src="images/ref.png">
+      <div></div>
     </div>
+
+    <!----------------------------INGREDIENTS PANEL-------------------------->
     <div class="tabPanel">
 
-      <!------------------------------- SEARCH BAR CONTAINER----------------------------------->
+      <!--------------- SEARCH BAR CONTAINER----------------------------------->
       <div class="searchContainer">
         <div class="searchBar">
           <input type="text" name="search" value="" autocomplete="off" id="userInput" onkeyup="searchFunction()"
@@ -58,10 +61,15 @@
           What Delicious Ingredients Did You Buy Today??
         </div>
         <div id="results">
+          <ul id="read">
+          </ul>
+
         </div>
       </div>
 
     </div>
+
+    <!-----------------SETTINGS PANEL--------------------------->
     <div class="tabPanel">
       <div class="optionsBox">
         <button>Upgrade Account</button>
@@ -82,8 +90,8 @@
   </div>
     
 
+  <script src="js/Ingredients_Search.js"></script>
     <script src="js/Fire_base.js"></script>
-    <script src="js/Ingredients_Search.js"></script>
 
 </body>
 

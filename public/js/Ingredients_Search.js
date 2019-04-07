@@ -5,15 +5,22 @@ var ingredients = fetch('data/ingredients.json').then(function (resp) {
   return resp.json();
 }).then(function (resp) {
   console.log(resp);
-  console.log(ingredients["0"].name);
+  names = resp.ingredients;
+  console.log(names);
+  console.log(Object.keys(names).length);
+  console.log(names.length);
+  console.log(names[13]);
+  
+  for (var i = 0; i < Object.keys(names).length; i++) {
+    addItem(names[i].name);
+  }
 
+  attachListener(names);
 });
 
 
-
+//////////////////////////// add items in the results section with class names and text
 var $result = $('#results');
-addItem('cl');
-
 function addItem(name) {
   var $container = $('<li/>', {
     class: 'lists'
@@ -30,8 +37,11 @@ function addItem(name) {
 }
 
 
+///////////////////////////////ADD EXPORT EVENT LISTENER
+// for (all the buttons) {}
 
-// result.append(resultList);
+
+////////////////////////////////////// SHOW TAB BUTTON FUNCTION
 function showPanel(panelIndex, colorCode) {
   tabButtons.forEach(function (node) {
     node.style.backgroundColor = "";
@@ -62,36 +72,18 @@ function searchFunction() {
   msgs = document.getElementById('msg'); // $("#msg")
 
   p = $('.ingredientName');
-  console.log(p[0].innerHTML);
+  ////////////////////////////////Search Filter Function
   for (i = 0; i < li.length; i++) {
 
     console.log(p[i]);
     if (searchInput.value.length == 0) {
-      li[i].style.display = 'none';
+      li[i].style.display = '';
       msg.style.display = 'block';
     } else if (p[i].innerHTML.toUpperCase().indexOf(searchInputCap) > -1) {
       li[i].style.display = 'block';
       msgs.style.display = 'none';
     } else {
-      li[i].style.display = 'none';
+      li[i].style.display = '';
     }
   }
-}
-
-var buttons = document.getElementByClassName('.add');
-var button;
-
-for(i=0; i<buttons.length;i++){
-  button[i] = document.getElementsByClassName('.add')[i];
-  button[i].addEventListener()
-}
-
-var button1, button2, button3, button4, li;
-li = document.getElementsByClassName('lists');
-
-
-var buttons = $(".add");
-for (i = 0, i < buttons.length; i++;) {
-  buttons[i].on("click", exportData1);
-
 }
