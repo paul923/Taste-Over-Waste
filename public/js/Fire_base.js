@@ -1,55 +1,26 @@
 var database = firebase.database();
+var fridge = database.ref('fridge');
 
 
-function attachListener(ingredients) {
+// frid.on('frid', function(snap) {
+//   console.log(snap);
+// })
 
 
-  var ingredientsSize = Object.keys(ingredients).length;
-  console.log("ingredients size :" + ingredientsSize);
 
-  var addButtons = $('.add');
-  var ref = database.ref('fridge');
-
-  ref.on('value', gotData, errData);
-
-  function gotData(data) {
-    console.log(data);
-    var names = data.value();
-    var keys = Object.keys(names);
-    console.log(keys);
-
-    for (i=0; i<keys.length; i++) {
-      var k = keys[i];
-      var ingred = names[k].ingred;
-      var li = createElement('li', )
-    }
-  }
-
-  function errData(err) {
-    console.log("ERROR!");
-    console.log(err);
-  }
-  for (i = 0; i < Object.keys(ingredients).length; i++) {
-    ingredientName = ingredients[i].name;
-    var data = {
-      Name: ingredientName
-    };
-    addButtons[i].onclick = exportDataDelegate(ref, ingredientName);
-    console.log(data);
-  };
-
-}
-
-
-function exportDataDelegate(ref,ingredientName) {
+function exportDataDelegate(fridge,ingredientName) {
   return function () {
-    exportData(ref, ingredientName)
+    exportData(fridge, ingredientName)
   }
 }
 
-function exportData(ref, ingredientName) {
+function exportData(fridge, ingredientName) {
   console.log(ingredientName + " is added to refridgerator!");
-  ref.push({
-    Name: ingredientName
+  database.ref("fridge/" + ingredientName).set({
+    name: ingredientName
   });
+  
+  // ref.push({
+  //   Name: ingredientName
+  // });
 }

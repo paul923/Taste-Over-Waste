@@ -7,17 +7,35 @@ var ingredients = fetch('data/ingredients.json').then(function (resp) {
   console.log(resp);
   names = resp.ingredients;
   console.log(names);
-  console.log(Object.keys(names).length);
+  console.log(keys(names).length);
   console.log(names.length);
   console.log(names[13]);
   
   for (var i = 0; i < Object.keys(names).length; i++) {
     addItem(names[i].name);
   }
-
   attachListener(names);
 });
 
+function attachListener(ingredients) {
+
+
+  var ingredientsSize = Object.keys(ingredients).length;
+  console.log("ingredients size :" + ingredientsSize);
+
+  var addButtons = $('.add');
+
+  for (i = 0; i < Object.keys(ingredients).length; i++) {
+    ingredientName = ingredients[i].name;
+    var data = {
+      Name: ingredientName
+    };
+    console.log("TESTING " + addButtons.length);
+    addButtons[i].onclick = exportDataDelegate(fridge, ingredientName);
+    console.log(data);
+  };
+
+}
 
 //////////////////////////// add items in the results section with class names and text
 var $result = $('#results');
@@ -87,3 +105,6 @@ function searchFunction() {
     }
   }
 }
+
+
+

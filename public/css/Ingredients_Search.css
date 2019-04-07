@@ -120,6 +120,9 @@ ul#listBox {
   overflow-x: hidden;
 
 }
+.displayedList {
+  display: inline-block;
+}
 
 li {
   width: 500px;
@@ -129,8 +132,7 @@ li {
   text-align: left;
   text-indent: 20px;
   display: none;
-
-}
+} 
 li:hover {
   background-color: #a3a3c2;
 }
