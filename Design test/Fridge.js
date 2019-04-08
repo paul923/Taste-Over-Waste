@@ -1,15 +1,27 @@
-function showPanel(panelIndex, colorCode) {
-  tabButtons.forEach(function (node) {
-    node.style.backgroundColor = "";
-    node.style.color = "";
-  });
-  tabButtons[panelIndex].style.backgroundColor = colorCode;
-  tabButtons[panelIndex].style.color = "black";
+////////////////setting toggle/////////////////
+$(document).ready(function () {
+  $("#hiddenMenu").hide();
 
-  tabPanel.forEach(function (node) {
-    node.style.display = "none";
+  $("#setting").click(function (event) {
+    event.stopPropagation();
+    $("#hiddenMenu").slideToggle("blind");
   });
-  tabPanel[panelIndex].style.display = "block";
+  $(document).click(function () {
+    $('#hiddenMenu').slideUp();
+  });
+});
+
+///////////////Tab panel//////////////////// 
+function changeTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabPanel");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
 }
-showPanel(1, '');
-

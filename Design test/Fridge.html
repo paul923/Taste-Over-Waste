@@ -7,45 +7,106 @@
     <title>Taste Dont Waste</title>
     <link rel="stylesheet" type="text/css" href="Fridge.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
 
 
   <body>
     <div id="wrapper">
-      <div id="banner"><img id="logo" src="Food-Waste/public/images/logo2.png"></div>
+      <!––----------------------------Banner and Menu----------------------------––>
+      <div id="banner"><img id="logo" src="../public/images/logo2.png"></div>
       <nav>
         <div class="navBar">
-          <a class="tabPanel" id="menu1" onclick="showPanel(0,'')">FRIDGE</a>
-          <a class="tabPanel" id="menu2" onclick="showPanel(1,'')">INGREDIENTS</a>
+          <div class="tablinks" id="menu1" onclick="changeTab(event,'fridgePanel')">
+            <div class="text" id="fridgeText">FRIDGE</div>
+          </div>
+          <div id="divider"></div>
+          <div class="tablinks" id="menu2" onclick="changeTab(event,'searchPanel')">
+            <div class="text" id="ingredientsText">INGREDIENTS</div>
+          </div>
         </div>
       </nav>
-      
+      <!––----------------------------Fridge Panel ----------------------------––>
       <div class="tabPanel" id="fridgePanel">
         <div class="inner" id="imageSide">
           <div id="left" class="content">
-            <img id="fridge" src="Food-Waste/public/images/Fridge.png">
+            <div id="fridgeFrame">
+              <div id="innerFridgeFrame">
+                <div class="rows">
+                  <div class="items">1</div>
+                  <div class="items">2</div>
+                  <div class="items">3</div>
+                </div>
+                <div class="rows">
+                  <div class="items">4</div>
+                  <div class="items">5</div>
+                  <div class="items">6</div>
+                </div>
+                <div class="rows">
+                  <div class="items">4</div>
+                  <div class="items">5</div>
+                  <div class="items">6</div>
+                </div>
+              </div>
+            </div>
+            <img id="fridge" src="../public/images/Fridge.png">
           </div>
           <div id="right" class="content">
-            <img id="blackboard" src="Food-Waste/public/images/black%20board.png">
+            <div id="boardFrame">
+              <div id="innerBoardFrame">
+                <h2>Onions</h2>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+              </div>
+            </div>
+            <img id="blackboard" src="../public/images/black%20board.png">
+            <div></div>
           </div>
           
         </div>
         <div class="inner" id="settingSide">
-          <a onclick="openNav()"><img id="setting" src="Food-Waste/public/images/setting_icon.png">
+          <a onclick="openNav()"><img id="setting" src="../public/images/setting_icon.png">
           </a>
           <div id="hiddenMenu">
             <ul>
               <li class="li">Upgrade Account</li>
               <li class="li">Edit Profile</li>
-              <li class="li" onclick="showPanel(0,'')">About</li>
-              <li class="li" onclick="showPanel(0,'')">Help</li>
-              <li class="li" onclick="showPanel(0,'')">Leave Feedback</li>
+              <li class="li">About</li>
+              <li class="li">Help</li>
+              <li class="li">Leave Feedback</li>
             </ul>
           </div>
         </div>
       </div>
       
+      <!––----------------------------Search Panel ----------------------------––>
       <div class="tabPanel" id="searchPanel">
         <div class="searchContainer">
           <div class="searchBar">
@@ -62,20 +123,7 @@
       </div>
       
     </div>
-    
-    <script>
-      $(document).ready(function() {
-        $("#hiddenMenu").hide();
 
-        $("#setting").click(function(event) {
-          event.stopPropagation();
-          $("#hiddenMenu").slideToggle("blind");
-        });
-        $(document).click(function() {
-          $('#hiddenMenu').slideUp();
-        });
-      });
-    </script>
     <script src="Fridge.js"></script>
 
   </body>
