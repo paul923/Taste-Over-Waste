@@ -15,6 +15,7 @@ var ingredients = fetch('../public/data/ingredients.json').then(function (resp) 
     addItem(names[i].name);
   }
   attachListener(names);
+  displayFridge();
 });
 
 function attachListener(ingredients) {

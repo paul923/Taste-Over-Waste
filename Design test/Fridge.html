@@ -10,21 +10,21 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
-    
-     <script>
-    // Initialize Firebase
-    
-    var config = {
-      apiKey: "AIzaSyBmkcN2V9VtYome1TD3A3WFUQGhvkOPtAo",
-      authDomain: "projectone-2e3bf.firebaseapp.com",
-      databaseURL: "https://projectone-2e3bf.firebaseio.com",
-      projectId: "projectone-2e3bf",
-      storageBucket: "projectone-2e3bf.appspot.com",
-      messagingSenderId: "851881954801"
-    };
-    firebase.initializeApp(config);
-    console.log(firebase);
-  </script>
+
+    <script>
+      // Initialize Firebase
+
+      var config = {
+        apiKey: "AIzaSyBmkcN2V9VtYome1TD3A3WFUQGhvkOPtAo",
+        authDomain: "projectone-2e3bf.firebaseapp.com",
+        databaseURL: "https://projectone-2e3bf.firebaseio.com",
+        projectId: "projectone-2e3bf",
+        storageBucket: "projectone-2e3bf.appspot.com",
+        messagingSenderId: "851881954801"
+      };
+      firebase.initializeApp(config);
+      console.log(firebase);
+    </script>
   </head>
 
 
@@ -38,7 +38,7 @@
             <div class="text" id="fridgeText" onclick="changeTab(event,'fridgePanel')">FRIDGE</div>
           </div>
           <div id="divider"></div>
-          <div class="tablinks" id="menu2" >
+          <div class="tablinks" id="menu2">
             <div class="text" id="ingredientsText" onclick="changeTab(event,'searchPanel')">INGREDIENTS</div>
           </div>
         </div>
@@ -55,7 +55,7 @@
                   <div id="3" class="items">3</div>
                   <div id="4" class="items">3</div>
                 </div>
-                
+
               </div>
             </div>
             <img id="fridge" src="../public/images/Fridge.png">
@@ -97,7 +97,7 @@
             <img id="blackboard" src="../public/images/black%20board.png">
             <div></div>
           </div>
-          
+
         </div>
         <div class="inner" id="settingSide">
           <a onclick="openNav()"><img id="setting" src="../public/images/setting_icon.png">
@@ -113,7 +113,7 @@
           </div>
         </div>
       </div>
-      
+
       <!––----------------------------Search Panel ----------------------------––>
       <div class="tabPanel" id="searchPanel">
         <div class="searchContainer">
@@ -129,14 +129,12 @@
           </div>
         </div>
       </div>
-      
+
     </div>
-<<<<<<< HEAD
-    <script src="../public/js/Ingredients_Search.js"></script>
-=======
-<script src="../public/js/Ingredients_Search.js"></script>
->>>>>>> 7aabdf1c6a08dbafdd58f8164080e7d8fec5f428
     <script src="Fridge.js"></script>
+
+    <script src="../public/js/Fridge.js"></script>
+    <script src="../public/js/Ingredients_Search.js"></script>
     <script src="../public/js/Fire_base.js"></script>
 
   </body>
