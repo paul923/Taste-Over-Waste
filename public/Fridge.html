@@ -1,84 +1,151 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <link rel="stylesheet" type="text/css" href="css/Fridge.css">
-  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyBmkcN2V9VtYome1TD3A3WFUQGhvkOPtAo",
-      authDomain: "projectone-2e3bf.firebaseapp.com",
-      databaseURL: "https://projectone-2e3bf.firebaseio.com",
-      projectId: "projectone-2e3bf",
-      storageBucket: "projectone-2e3bf.appspot.com",
-      messagingSenderId: "851881954801"
-    };
-    firebase.initializeApp(config);
-  </script>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0,maximum-scale = 1.0">
+    <title>Taste Dont Waste</title>
+    <link rel="stylesheet" type="text/css" href="css/Fridge.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
 
-<body>
-  <div id="page">
-    <nav>
-      <div id="menu">
-          <div class="menu-button">
-            <a href="./recipes.html" class="block">Recipes</a>
+    <script>
+      // Initialize Firebase
+
+      var config = {
+        apiKey: "AIzaSyBmkcN2V9VtYome1TD3A3WFUQGhvkOPtAo",
+        authDomain: "projectone-2e3bf.firebaseapp.com",
+        databaseURL: "https://projectone-2e3bf.firebaseio.com",
+        projectId: "projectone-2e3bf",
+        storageBucket: "projectone-2e3bf.appspot.com",
+        messagingSenderId: "851881954801"
+      };
+      firebase.initializeApp(config);
+      console.log(firebase);
+
+    </script>
+  </head>
+
+
+  <body>
+    <div id="wrapper">
+      <!––----------------------------Banner and Menu----------------------------––>
+      <div id="banner"><img id="logo" src="../public/images/logo2.png"></div>
+      <nav>
+        <div class="navBar">
+          <div class="tablinks" id="menu1">
+            <div class="text" id="fridgeText" onclick="changeTab(event,'fridgePanel')">FRIDGE</div>
           </div>
-          <div class="menu-button">
-            <a href="./main.html" class="block">Fridge</a>
+          <div id="divider"></div>
+          <div class="tablinks" id="menu2">
+            <div class="text" id="ingredientsText" onclick="changeTab(event,'searchPanel')">INGREDIENTS</div>
           </div>
-          <div class="menu-button">
-            <a href="./ingredients.html" class="block">Ingredients</a>
+        </div>
+      </nav>
+      <!––----------------------------Fridge Panel ----------------------------––>
+      <div class="tabPanel" id="fridgePanel">
+        <div class="inner" id="imageSide">
+          <div id="left" class="content">
+            <div id="fridgeFrame">
+              <div id="innerFridgeFrame">
+                <div class="rows">
+                  <div id="1" class="items">1</div>
+                  <div id="2" class="items">2</div>
+                  <div id="3" class="items">3</div>
+                </div>
+                <div class="rows">
+                  <div id="4" class="items">1</div>
+                  <div id="5" class="items">2</div>
+                  <div id="6" class="items">3</div>
+                </div>
+                <div class="rows">
+                  <div id="7" class="items">1</div>
+                  <div id="8" class="items">2</div>
+                  <div id="9" class="items">3</div>
+                </div>
+
+              </div>
+            </div>
+            <img id="fridge" src="../public/images/Fridge.png">
           </div>
-      </div>
-    </nav>
-    <div id="content">
-      <div id="fridge-section">
-        <div id="fridge">
-          <a href="../Shane_Ingredients/ingredients.html" style="text-decoration: none">
-          <div class="fridge-block">item</div>
-          <div class="fridge-block">item</div>
+          <div id="right" class="content">
+            <div id="boardFrame">
+              <div id="innerBoardFrame">
+                <h2>Onions</h2>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+                this is where you put details<br>
+              </div>
+            </div>
+            <img id="blackboard" src="../public/images/black%20board.png">
+            <div></div>
+          </div>
+
+        </div>
+        <div class="inner" id="settingSide">
+          <a onclick="openNav()"><img id="setting" src="../public/images/setting_icon.png">
           </a>
-          <div class="fridge-block" id="item3">item</div>
+          <div id="hiddenMenu">
+            <ul>
+              <li class="li">Upgrade Account</li>
+              <li class="li">Edit Profile</li>
+              <li class="li">About</li>
+              <li class="li">Help</li>
+              <li class="li">Leave Feedback</li>
+            </ul>
+          </div>
         </div>
+      </div>
 
-      </div>
-      <div id="rightSide">
-        <div id="infoBox">
-          <div id="ingredientName"> 
+      <!––----------------------------Search Panel ----------------------------––>
+      <div class="tabPanel" id="searchPanel">
+        <div class="searchContainer">
+          <div class="searchBar">
+            <input type="text" name="search" value="" autocomplete="off" id="userInput" onkeyup="searchFunction()" placeholder="Search...">
           </div>
-          <div id="ingredientInfo">
-            <div id="status">
-            </div>
-            <div id="amount">
-            </div>
+          <div id="msg">
+            What left overs do you see today?
           </div>
-          <div id="add" class="button">
-            add 
-          </div>
-          <div id="discard" class="button">
-            discard
+          <div id="results">
+
+
           </div>
         </div>
-        <div id="pot">
-          Pot
-          <button id="cookButton">
-            cook
-          </button>
-        </div>
       </div>
+
     </div>
-    <footer>
-      <div id="footer">
-        footer
-      </div>
-    </footer>
-  </div>
+    <script src="js/Fire_base.js"></script>
+    <script src="js/Fridge.js"></script>
+    <script src="js/Ingredients_Search.js"></script>
+    <script src="js/Slide_TabPanel.js"></script>
 
-
-  <script src="/public/js/Fridge.js"></script>
-</body>
+  </body>
 
 </html>
