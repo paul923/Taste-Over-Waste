@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <meta name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0,maximum-scale = 1.0">
     <title>Taste Dont Waste</title>
     <link rel="stylesheet" type="text/css" href="Fridge.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -18,12 +18,12 @@
       <div id="banner"><img id="logo" src="../public/images/logo2.png"></div>
       <nav>
         <div class="navBar">
-          <div class="tablinks" id="menu1" onclick="changeTab(event,'fridgePanel')">
-            <div class="text" id="fridgeText">FRIDGE</div>
+          <div class="tablinks" id="menu1">
+            <div class="text" id="fridgeText" onclick="changeTab(event,'fridgePanel')">FRIDGE</div>
           </div>
           <div id="divider"></div>
-          <div class="tablinks" id="menu2" onclick="changeTab(event,'searchPanel')">
-            <div class="text" id="ingredientsText">INGREDIENTS</div>
+          <div class="tablinks" id="menu2" >
+            <div class="text" id="ingredientsText" onclick="changeTab(event,'searchPanel')">INGREDIENTS</div>
           </div>
         </div>
       </nav>

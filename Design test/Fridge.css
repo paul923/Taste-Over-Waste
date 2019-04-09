@@ -3,6 +3,10 @@
   font-family: 'chalkFont';
   src: url(../public/font/chalkfont/DK_Crayon_Crumble.ttf);
 }
+#wrapper {
+  width: 100%;
+  height: 768px;
+}
 
 * {
   box-sizing: border-box;
@@ -10,7 +14,7 @@
 .tabPanel {
   display: none;
   animation: fadeEffect 1s;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 @keyframes fadeEffect {
   from {opacity: 0;}
@@ -18,61 +22,62 @@
 }
 
 #banner {
-  box-sizing: border-box;
+  box-sizing: content-box;
   background-color: white;
 /*  background-image: url(../public/images/banner.png);*/
-  background-size: cover;
-  background-repeat: no-repeat;
-  text-align: center;
-  height: 200px;
-  padding: 30px;
+  height: 100px;
+  margin: 30px;
 }
 
 #logo {
-  width: 300px;
+  width: 200px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: auto;
 }
 
 .navBar {
   width: 100%;
-  height: 120px;
+  height: 90px;
   background-color: white;
-  overflow: auto;
+  overflow: hidden;
   margin-top: 8px;
   margin-bottom: 8px;
-  padding: 20px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  text-align: center;
-  font-size: 21pt;
+  padding: 10px;
 }
 .tablinks {
   float: left;
   color: black;
   text-decoration: none;
-  width: 49.9%;
+  width: 49.8%;
   height: 100%;
   text-align: center;
-  cursor: pointer;
   top: 0;
   bottom: 0;
   display: inline-block;
 }
 .text {
-  width: 350px;
+  width: 300px;
   border: 3px solid #ffe0b3;
   border-radius: 30px;
-  padding: 20px;
+  padding: 13px;
   top: 0;
   bottom: 0;
   letter-spacing: 4px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  font-size: 18pt;
+  cursor: pointer;
 }
 #fridgeText {
   float: right;
-  margin-right: 100px;
+  margin-right: 60px;
 }
 
 #ingredientsText {
-  margin-left: 100px;
+  margin-left: 60px;
 }
 
 .text:hover {
