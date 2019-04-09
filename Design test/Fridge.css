@@ -218,12 +218,21 @@ ul {
   display: none;
   text-align: left;
   text-indent: 20px;
+<<<<<<< HEAD
 }
 p {
   width: 300px;
   line-height: 50px;
   display: inline;
 }
+=======
+}
+p {
+  width: 300px;
+  line-height: 50px;
+  display: inline;
+}
+>>>>>>> 7aabdf1c6a08dbafdd58f8164080e7d8fec5f428
 
 .lists:hover {
   background-color: grey;
