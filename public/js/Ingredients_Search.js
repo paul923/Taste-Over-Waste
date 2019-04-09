@@ -91,13 +91,21 @@ function searchFunction() {
 
   p = $('.ingredientName');
   ////////////////////////////////Search Filter Function
+
+  // clear the <p>
+
   for (i = 0; i < li.length; i++) {
 
     console.log(p[i]);
     if (searchInput.value.length == 0) {
       li[i].style.display = '';
-      msg.style.display = 'block';
+      msgs.style.display = 'block';
     } else if (p[i].innerHTML.toUpperCase().indexOf(searchInputCap) > -1) {
+      // create element <p>
+      // create text node "avocado"
+      // append text to <p>
+      // append <p> to results
+
       li[i].style.display = 'block';
       msgs.style.display = 'none';
     } else {
@@ -106,5 +114,15 @@ function searchFunction() {
   }
 }
 
+// function addItem(name) {
+//   var $container = $('<li/>', {
+//     class: 'displayedList'
+//   }).append(
+//     $('<p/>', {
+//       class: 'ingredientName',
+//       text: name
+//     })
+//   ).appendTo($displayed);
+// }
 
 
