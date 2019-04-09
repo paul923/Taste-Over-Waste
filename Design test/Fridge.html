@@ -9,6 +9,22 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+    
+     <script>
+    // Initialize Firebase
+    
+    var config = {
+      apiKey: "AIzaSyBmkcN2V9VtYome1TD3A3WFUQGhvkOPtAo",
+      authDomain: "projectone-2e3bf.firebaseapp.com",
+      databaseURL: "https://projectone-2e3bf.firebaseio.com",
+      projectId: "projectone-2e3bf",
+      storageBucket: "projectone-2e3bf.appspot.com",
+      messagingSenderId: "851881954801"
+    };
+    firebase.initializeApp(config);
+    console.log(firebase);
+  </script>
   </head>
 
 
@@ -34,20 +50,12 @@
             <div id="fridgeFrame">
               <div id="innerFridgeFrame">
                 <div class="rows">
-                  <div class="items">1</div>
-                  <div class="items">2</div>
-                  <div class="items">3</div>
+                  <div id="1" class="items">1</div>
+                  <div id="2" class="items">2</div>
+                  <div id="3" class="items">3</div>
+                  <div id="4" class="items">3</div>
                 </div>
-                <div class="rows">
-                  <div class="items">4</div>
-                  <div class="items">5</div>
-                  <div class="items">6</div>
-                </div>
-                <div class="rows">
-                  <div class="items">4</div>
-                  <div class="items">5</div>
-                  <div class="items">6</div>
-                </div>
+                
               </div>
             </div>
             <img id="fridge" src="../public/images/Fridge.png">
@@ -113,7 +121,7 @@
             <input type="text" name="search" value="" autocomplete="off" id="userInput" onkeyup="searchFunction()" placeholder="Search...">
           </div>
           <div id="msg">
-            What Delicious Ingredients Did You Buy Today??
+            What left overs do you see today?
           </div>
           <div id="results">
 
@@ -123,8 +131,9 @@
       </div>
       
     </div>
-
+<script src="../public/js/Ingredients_Search.js"></script>
     <script src="Fridge.js"></script>
+    <script src="../public/js/Fire_base.js"></script>
 
   </body>
 
