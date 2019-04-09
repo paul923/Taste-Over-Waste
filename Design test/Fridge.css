@@ -1,3 +1,23 @@
+/*******scrollbar************/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
 /*******font************/
 @font-face {
   font-family: 'chalkFont';
@@ -15,7 +35,7 @@
 .tabPanel {
   display: none;
   animation: fadeEffect 1s;
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 @keyframes fadeEffect {
@@ -31,12 +51,12 @@
 #banner {
   box-sizing: content-box;
   background-color: white;
-  height: 100px;
-  margin: 30px;
+  height: 70px;
+  margin: 20px;
 }
 
 #logo {
-  width: 200px;
+  width: 160px;
   left: 0;
   right: 0;
   position: absolute;
@@ -45,12 +65,11 @@
 
 .navBar {
   width: 100%;
-  height: 90px;
+  height: 60px;
   background-color: white;
   overflow: hidden;
   margin-top: 8px;
   margin-bottom: 8px;
-  padding: 10px;
 }
 
 .tablinks {
@@ -66,7 +85,7 @@
 }
 
 .text {
-  width: 300px;
+  width: 250px;
   border: 3px solid #ffe0b3;
   border-radius: 30px;
   padding: 13px;
@@ -76,17 +95,17 @@
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   text-align: center;
-  font-size: 18pt;
+  font-size: 15pt;
   cursor: pointer;
 }
 
 #fridgeText {
   float: right;
-  margin-right: 60px;
+  margin-right: 50px;
 }
 
 #ingredientsText {
-  margin-left: 60px;
+  margin-left: 50px;
 }
 
 .text:hover {
@@ -96,11 +115,11 @@
 }
 
 #divider {
-  margin-top: 20px;
+  margin-top: 10px;
   float: left;
-  height: 40px;
+  height: 30px;
   width: 0;
-  border: 2px solid lightgrey;
+  border: 1.5px solid lightgrey;
 }
 
 #fridgePanel {
@@ -157,7 +176,7 @@
   color: #FFFFFF;
   width: 100%;
   height: 100%;
-  padding: 120px 30px 200px 140px;
+  padding: 80px 30px 150px 80px;
 }
 
 #innerBoardFrame {
@@ -169,16 +188,16 @@
 }
 
 #fridge {
-  max-width: 100%;
+  width: 380px;
 }
 
 #blackboard {
-  max-width: 100%;
-  margin-left: 100px;
+  max-width: 500px;
+  margin-left: 50px;
 }
 
 #setting {
-  width: 50px;
+  width: 30px;
   float: right;
   cursor: pointer;
 }
@@ -246,9 +265,9 @@ p {
 }
 
 #imageSide {
-  margin-left: 400px;
+  margin-left: 200px;
   width: 60%;
-  display: inline-block;
+  display: inline;
   position: relative;
   z-index: 2;
 }
