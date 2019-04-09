@@ -204,15 +204,16 @@
 
 /*********side menu**************/
 #sidebar {
-  width: 100px;
+  width: 80px;
+  display: inline;
 }
 
 #hiddenMenu {
   border-radius: 20px;
   z-index: 3;
   background-color: white;
-  width: 250px;
-  height: 300px;
+  width: 180px;
+  height: 230px;
   border: 2px solid #FFB257;
   position: absolute;
 }
@@ -222,6 +223,17 @@ ul {
   padding-top: 30px;
   padding-left: 0;
   margin: 0;
+}
+
+.li {
+  padding: 7px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.li:hover {
+  background-color: grey;
+  color: white;
+  cursor: pointer;
 }
 
 .lists {
@@ -237,21 +249,12 @@ ul {
   display: none;
   text-align: left;
   text-indent: 20px;
-<<<<<<< HEAD
 }
 p {
   width: 300px;
   line-height: 50px;
   display: inline;
 }
-=======
-}
-p {
-  width: 300px;
-  line-height: 50px;
-  display: inline;
-}
->>>>>>> 7aabdf1c6a08dbafdd58f8164080e7d8fec5f428
 
 .lists:hover {
   background-color: grey;
@@ -273,7 +276,7 @@ p {
 }
 
 #settingSide {
-  width: 250px;
+  width: 180px;
   height: auto;
   float: right;
   z-index: 3;
