@@ -281,10 +281,11 @@ p {
 }
 
 #settingSide {
-  width: 180px;
+  width: 220px;
   height: auto;
   float: right;
   z-index: 3;
+  display: inline;
 }
 
 
