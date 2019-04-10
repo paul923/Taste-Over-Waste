@@ -1,7 +1,7 @@
 var tabButtons = document.querySelectorAll("button");
 var tabPanel = document.querySelectorAll(".tabPanel");
 
-var ingredients = fetch('../public/data/ingredients.json').then(function (resp) {
+var ingredients = fetch('data/ingredients.json').then(function (resp) {
   return resp.json();
 }).then(function (resp) {
   console.log(resp);
@@ -54,6 +54,7 @@ function addItem(name) {
     }),
     $('<button/>', {
       class: 'add',
+      style: 'padding-bottom: 4px',
       text: '+'
     })
   ).appendTo($result);

@@ -32,7 +32,25 @@
   box-sizing: border-box;
 }
 
-#clearn
+#clear {
+  height: 100px;
+  width: 100px;
+  border: 2px solid grey;
+  outline: none;
+  background: white;
+  border-radius: 30px;
+  float: left;
+  clear: both;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14pt;
+  font-weight: bold;
+  letter-spacing: 3px;
+  cursor: pointer;
+  box-shadow: 5px 5px 2px grey;
+}
+#clear:hover {
+  background-color: lightgrey;
+}
 .tabPanel {
   display: none;
   height: 600px;
@@ -53,12 +71,12 @@
 #banner {
   box-sizing: content-box;
   background-color: white;
-  height: 70px;
+  height: 90px;
   margin: 20px;
 }
 
 #logo {
-  width: 160px;
+  width: 180px;
   left: 0;
   right: 0;
   position: absolute;
@@ -102,7 +120,7 @@
 }
 
 .active {
-  background-color: #FFD69A;
+  background-color: #ffc167;
   color: white;
 }
 
@@ -130,7 +148,7 @@
 }
 
 #fridgePanel {
-  background-color: #D1EFB5;
+  background-color: #DCDBA8;
   padding: 30px;
   width: 100%;
   height: auto;
@@ -175,7 +193,7 @@
   margin-bottom: 18px;
 }
 h3 {
-  margin-top: 2px;
+  margin-top: 5px;
 }
 .items {
   width: 80px;
@@ -209,7 +227,6 @@ h3 {
 #innerBoardFrame {
   width: 100%;
   height: 100%;
-  overflow: auto;
   font-size: 19pt;
   font-family: 'chalkFont';
 }
@@ -266,10 +283,12 @@ ul {
   color: white;
   cursor: pointer;
 }
-
+h2 {
+  margin-top: 7px;
+}
 .lists {
   padding: 0;
-  width: 465px;
+  width: 490px;
   height: 50px;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -294,8 +313,20 @@ p {
 
 .add {
   float: right;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
+  font-size: 14pt;
+  border-radius: 10px;
+  margin: 12px;
+  border: 2px solid black;
+  cursor: pointer;
+  padding-bottom: 4px;
+vertical-align: middle;
+
+}
+
+.add:hover {
+  background-color: grey;
 }
 
 #imageSide {

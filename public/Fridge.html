@@ -29,11 +29,10 @@
 
 
 <body>
-  <button id="clear" onclick="clearFridge()">Clear Fridge</button>
 
   <div id="wrapper">
     <!-- –----------------------------Banner and Menu----------------------------–-->
-    <div id="banner"><img id="logo" src="../public/images/logo2.png"></div>
+    <div id="banner"><img id="logo" src="images/logo2.png"></div>
     <nav>
       <div class="navBar">
         <div class="tablinks" id="menu1">
@@ -53,7 +52,7 @@
             placeholder="Search...">
         </div>
         <div id="msg">
-          What left overs do you see today?
+          What leftovers do you see today?
         </div>
         <div id="results">
 
@@ -63,7 +62,9 @@
     </div>
     <!-- –----------------------------Fridge Panel ------------------------------>
     <div class="tabPanel" id="fridgePanel">
+        <button id="clear" onclick="clearFridge()">Clear Fridge</button>
       <div class="inner" id="imageSide">
+          
         <div id="left" class="content">
           <div id="fridgeFrame">
             <div id="innerFridgeFrame">
@@ -74,7 +75,7 @@
               </div>
               <div class="rows">
                 <div class="imgBox"><img id="4" src="images/plate.png" class="items"></img></div>
-                <div class="imgBox"> <img id="5" src="images/plate.png" class="items"></img></div>
+                <div class="imgBox"><img id="5" src="images/plate.png" class="items"></img></div>
                 <div class="imgBox"><img id="6" src="images/plate.png" class="items"></img></div>
               </div>
               <div class="rows">
@@ -94,7 +95,7 @@
               </div>
             </div>
           </div>
-          <img id="fridge" src="../public/images/Fridge.png">
+          <img id="fridge" src="images/fridge.png">
         </div>
         <div id="right" class="content">
           <div id="boardFrame">
@@ -109,13 +110,15 @@
               <span>$1530</span> worth of avacados!<br>
             </div>
           </div>
-          <img id="blackboard" src="../public/images/black%20board.png">
+          <img id="blackboard" src="images/black%20board.png">
           <div></div>
         </div>
       </div>
       <!--------------setting----------------------->
       <div class="inner" id="settingSide">
-        <a onclick="openNav()"><img id="setting" src="../public/images/setting_icon.png">
+        
+
+        <a onclick="openNav()"><img id="setting" src="images/setting_icon.png">
         </a>
         <div id="hiddenMenu">
           <ul>
