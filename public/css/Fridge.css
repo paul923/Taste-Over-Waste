@@ -168,9 +168,13 @@
 .items {
   width: 80px;
   height: 70px;
-  margin: 5px;
+  margin-top: 7px;
+  margin-bottom: 27px;
+  margin-left: 5px;
+  margin-right: 5px;
   display: inline-block;
   border: 1px solid white;
+  overflow: hidden;
 }
 
 #boardFrame {

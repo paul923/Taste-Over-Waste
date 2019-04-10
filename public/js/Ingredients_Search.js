@@ -7,12 +7,13 @@ var ingredients = fetch('../public/data/ingredients.json').then(function (resp) 
   console.log(resp);
   names = resp.ingredients;
   console.log(names);
- // console.log(keys[names].length);
+  // console.log(keys[names].length);
   console.log(names.length);
   console.log(names[13]);
-  
+
   for (var i = 0; i < Object.keys(names).length; i++) {
-    addItem(names[i].name);
+    addItem(names[i].image);
+    console.log(names[i].image);
   }
   attachListener(names);
   displayFridge();
@@ -23,11 +24,12 @@ function attachListener(ingredients) {
 
   var ingredientsSize = Object.keys(ingredients).length;
   console.log("ingredients size :" + ingredientsSize);
-
   var addButtons = $('.add');
 
   for (i = 0; i < Object.keys(ingredients).length; i++) {
     ingredientName = ingredients[i].name;
+    console.log(ingredients[i]);
+
     var data = {
       Name: ingredientName
     };
@@ -40,6 +42,7 @@ function attachListener(ingredients) {
 
 //////////////////////////// add items in the results section with class names and text
 var $result = $('#results');
+
 function addItem(name) {
   var $container = $('<li/>', {
     class: 'lists'
@@ -101,5 +104,3 @@ function searchFunction() {
 //     })
 //   ).appendTo($displayed);
 // }
-
-
