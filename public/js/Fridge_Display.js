@@ -4,6 +4,7 @@ function displayFridge() {
     "value",
     function (snap) {
       console.log("---All the things in the fridge ");
+      console.log(snap);
       console.log(snap.val());
       displayList(snap.val());
 
@@ -16,15 +17,15 @@ function displayFridge() {
     console.log(list);
     var i = 1;
     for (x in list) {
-      console.log(x);
+      console.log(list[x].image);
       var slot = document.getElementById(i);
-            slot.innerHTML = x;
+      slot.setAttribute("src", "images/" + list[x].image);
+      slot.setAttribute("alt", "No pic");
 
       i++;
     }
   }
-  
+  $("#clear").click(function() {
+    $("#fridgeFrame").load(" #fridgeFrame > *");
+  }); 
 }
-
-  
- 

@@ -1,160 +1,156 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale = 1.0,maximum-scale = 1.0">
-    <title>Taste Dont Waste</title>
-    <link rel="stylesheet" type="text/css" href="css/Fridge.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale = 1.0,maximum-scale = 1.0">
+  <title>Taste Dont Waste</title>
+  <link rel="stylesheet" type="text/css" href="css/Fridge.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
 
-    <script>
-      // Initialize Firebase
+  <script>
+    // Initialize Firebase
 
-      var config = {
-        apiKey: "AIzaSyBmkcN2V9VtYome1TD3A3WFUQGhvkOPtAo",
-        authDomain: "projectone-2e3bf.firebaseapp.com",
-        databaseURL: "https://projectone-2e3bf.firebaseio.com",
-        projectId: "projectone-2e3bf",
-        storageBucket: "projectone-2e3bf.appspot.com",
-        messagingSenderId: "851881954801"
-      };
-      firebase.initializeApp(config);
-      console.log(firebase);
+    var config = {
+      apiKey: "AIzaSyBmkcN2V9VtYome1TD3A3WFUQGhvkOPtAo",
+      authDomain: "projectone-2e3bf.firebaseapp.com",
+      databaseURL: "https://projectone-2e3bf.firebaseio.com",
+      projectId: "projectone-2e3bf",
+      storageBucket: "projectone-2e3bf.appspot.com",
+      messagingSenderId: "851881954801"
+    };
+    firebase.initializeApp(config);
+    console.log(firebase);
+  </script>
+</head>
 
-    </script>
-  </head>
 
+<body>
+  <button id="clear" onclick="clearFridge()">Clear Fridge</button>
 
-  <body>
-    <div id="wrapper">
-      <!––----------------------------Banner and Menu----------------------------––>
-      <div id="banner"><img id="logo" src="../public/images/logo2.png"></div>
-      <nav>
-        <div class="navBar">
-          <div class="tablinks" id="menu1">
-            <div class="text" id="fridgeText" onclick="changeTab(event,'fridgePanel')">FRIDGE</div>
-          </div>
-          <div id="divider"></div>
-          <div class="tablinks" id="menu2">
-            <div class="text" id="ingredientsText" onclick="changeTab(event,'searchPanel')">INGREDIENTS</div>
-          </div>
+  <div id="wrapper">
+    <!-- –----------------------------Banner and Menu----------------------------–-->
+    <div id="banner"><img id="logo" src="../public/images/logo2.png"></div>
+    <nav>
+      <div class="navBar">
+        <div class="tablinks" id="menu1">
+          <div class="text" id="ingredientsText" onclick="changeTab(event,'searchPanel')">INGREDIENTS</div>
         </div>
-      </nav>
-      <!––----------------------------Fridge Panel ----------------------------––>
-      <div class="tabPanel" id="fridgePanel">
-        <div class="inner" id="imageSide">
-          <div id="left" class="content">
-            <div id="fridgeFrame">
-              <div id="innerFridgeFrame">
-                <div class="rows">
-                  <div id="1" class="items">1</div>
-                  <div id="2" class="items">2</div>
-                  <div id="3" class="items">3</div>
-                </div>
-                <div class="rows">
-                  <div id="4" class="items">4</div>
-                  <div id="5" class="items">5</div>
-                  <div id="6" class="items">6</div>
-                </div>
-                <div class="rows">
-                  <div id="7" class="items">7</div>
-                  <div id="8" class="items">8</div>
-                  <div id="9" class="items">9</div>
-                </div>
-                <div class="rows">
-                  <div id="10" class="items">10</div>
-                  <div id="11" class="items">11</div>
-                  <div id="12" class="items">12</div>
-                </div>
-                <div class="rows">
-                  <div id="13" class="items">13</div>
-                  <div id="14" class="items">14</div>
-                  <div id="15" class="items">15</div>
-                </div>
-              </div>
-            </div>
-            <img id="fridge" src="../public/images/Fridge.png">
-          </div>
-          <div id="right" class="content">
-            <div id="boardFrame">
-              <div id="innerBoardFrame">
-                <h2>Onions</h2>
-                this is where you put details<br>
-                this is where you put details<br>
-                this is where you put details<br>
-                this is where you put details<br>
-                this is where you put details<br>
-                this is where you put details<br>
-                this is where you put details<br>
-                this is where you put details<br>
-                this is where you put details<br>
-                this is where you put details<br>
-                this is where you put details<br>
-                this is where you put details<br>
-                this is where you put details<br>
-                this is where you put details<br>
-                this is where you put details<br>
-                this is where you put details<br>
-                this is where you put details<br>
-                this is where you put details<br>
-                this is where you put details<br>
-                this is where you put details<br>
-                this is where you put details<br>
-                this is where you put details<br>
-                this is where you put details<br>
-                this is where you put details<br>
-                this is where you put details<br>
-                this is where you put details<br>
-                this is where you put details<br>
-                this is where you put details<br>
-              </div>
-            </div>
-            <img id="blackboard" src="../public/images/black%20board.png">
-            <div></div>
-          </div>
-<!––----------------------------Setting ----------------------------––>
-        </div>
-        <div class="inner" id="settingSide">
-          <a onclick="openNav()"><img id="setting" src="../public/images/setting_icon.png">
-          </a>
-          <div id="hiddenMenu">
-            <ul>
-              <li class="li">Upgrade Account</li>
-              <li class="li">Edit Profile</li>
-              <li class="li">About</li>
-              <li class="li">Help</li>
-              <li class="li">Leave Feedback</li>
-            </ul>
-          </div>
+        <div id="divider"></div>
+        <div class="tablinks" id="menu2">
+          <div class="text" id="fridgeText" onclick="changeTab(event,'fridgePanel')">FRIDGE</div>
         </div>
       </div>
+    </nav>
+    <!-- –----------------------------Search Panel ------------------------------>
+    <div class="tabPanel" id="searchPanel">
+      <div class="searchContainer">
+        <div class="searchBar">
+          <input type="text" name="search" value="" autocomplete="off" id="userInput" onkeyup="searchFunction()"
+            placeholder="Search...">
+        </div>
+        <div id="msg">
+          What left overs do you see today?
+        </div>
+        <div id="results">
 
-      <!––----------------------------Search Panel ----------------------------––>
-      <div class="tabPanel" id="searchPanel">
-        <div class="searchContainer">
-          <div class="searchBar">
-            <input type="text" name="search" value="" autocomplete="off" id="userInput" onkeyup="searchFunction()" placeholder="Search...">
-          </div>
-          <div id="msg">
-            What left overs do you see today?
-          </div>
-          <div id="results">
 
-
-          </div>
         </div>
       </div>
-
     </div>
-    <script src="js/Fire_base.js"></script>
-    <script src="js/Fridge.js"></script>
-    <script src="js/Ingredients_Search.js"></script>
-    <script src="js/Slide_TabPanel.js"></script>
+    <!-- –----------------------------Fridge Panel ------------------------------>
+    <div class="tabPanel" id="fridgePanel">
+      <div class="inner" id="imageSide">
+        <div id="left" class="content">
+          <div id="fridgeFrame">
+            <div id="innerFridgeFrame">
+              <div class="rows">
+                <div class="imgBox"><img id="1" src="images/plate.png" class="items"></img></div>
+                <div class="imgBox"><img id="2" src="images/plate.png" class="items"></img></div>
+                <div class="imgBox"><img id="3" src="images/plate.png" class="items"></img></div>
+              </div>
+              <div class="rows">
+                <div class="imgBox"><img id="4" src="images/plate.png" class="items"></img></div>
+                <div class="imgBox"> <img id="5" src="images/plate.png" class="items"></img></div>
+                <div class="imgBox"><img id="6" src="images/plate.png" class="items"></img></div>
+              </div>
+              <div class="rows">
+                <div class="imgBox"><img id="7" src="images/plate.png" class="items"></img></div>
+                <div class="imgBox"><img id="8" src="images/plate.png" class="items"></img></div>
+                <div class="imgBox"><img id="9" src="images/plate.png" class="items"></img></div>
+              </div>
+              <div class="rows">
+                <div class="imgBox"><img id="10" src="images/plate.png" class="items"></img></div>
+                <div class="imgBox"><img id="11" src="images/plate.png" class="items"></img></div>
+                <div class="imgBox"><img id="12" src="images/plate.png" class="items"></img></div>
+              </div>
+              <div class="rows">
+                <div class="imgBox"><img id="13" src="images/plate.png" class="items"></img></div>
+                <div class="imgBox"><img id="14" src="images/plate.png" class="items"></img></div>
+                <div class="imgBox"><img id="15" src="images/plate.png" class="items"></img></div>
+              </div>
+            </div>
+          </div>
+          <img id="fridge" src="../public/images/Fridge.png">
+        </div>
+        <div id="right" class="content">
+          <div id="boardFrame">
+            <div id="innerBoardFrame">
+              <h2>Our Mission</h2>
+              Here at Taste Over Waste,<br>
+              We want to help YOU, save YOUR<br>
+              food from being wasted.<br>
+              A Canadian household wastses<br>
+              roughly 170kg of food every<br>
+              Year! That's equivalent to <br>
+              <span>$1530</span> worth of avacados!<br>
+            </div>
+          </div>
+          <img id="blackboard" src="../public/images/black%20board.png">
+          <div></div>
+        </div>
+      </div>
+      <!--------------setting----------------------->
+      <div class="inner" id="settingSide">
+        <a onclick="openNav()"><img id="setting" src="../public/images/setting_icon.png">
+        </a>
+        <div id="hiddenMenu">
+          <ul>
+            <li class="li">Upgrade Account</li>
+            <li class="li">Edit Profile</li>
+            <li class="li">About</li>
+            <li class="li">Help</li>
+            <li class="li">Leave Feedback</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-  </body>
+  </div>
+  <script src="js/Fire_base.js"></script>
+  <script src="js/Fridge_Display.js"></script>
+  <script src="js/Ingredients_Search.js"></script>
+  <script src="js/Slide_TabPanel.js"></script>
+
+  <script>
+    function clearFridge() {
+      console.log("CLICKED")
+      var refFridge = firebase.database().ref('fridge/');
+      console.log(fridge);
+
+      refFridge.remove()
+        .then(
+          console.log("Remove succeeded.")
+        )
+        .catch(function (error) {
+          console.log("Remove failed: " + error.message)
+        })
+    }
+  </script>
+
+</body>
 
 </html>

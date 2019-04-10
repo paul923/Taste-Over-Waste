@@ -3,16 +3,19 @@
 var database = firebase.database();
 var fridge = database.ref('fridge');
 
-function exportDataDelegate(fridge,ingredientName) {
+function exportDataDelegate(fridge,data) {
   return function () {
-    exportData(fridge, ingredientName)
+    exportData(fridge, data)
   }
 }
+
 //testting
-function exportData(fridge, ingredientName) {
-  console.log(ingredientName + " is added to refridgerator!");
-  database.ref("fridge/" + ingredientName).update({
-    name: ingredientName
+function exportData(fridge, data) {
+  console.log(data.Name + " is added to refridgerator!");
+  database.ref("fridge/" + data.Name).update({
+    name: data.Name,
+    image: data.Image
   });
   
 }
+

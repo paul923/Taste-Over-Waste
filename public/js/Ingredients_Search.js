@@ -12,13 +12,12 @@ var ingredients = fetch('../public/data/ingredients.json').then(function (resp) 
   console.log(names[13]);
 
   for (var i = 0; i < Object.keys(names).length; i++) {
-    addItem(names[i].image);
+    addItem(names[i].name);
     console.log(names[i].image);
   }
   attachListener(names);
-  displayFridge();
 });
-
+// 
 function attachListener(ingredients) {
 
 
@@ -28,13 +27,15 @@ function attachListener(ingredients) {
 
   for (i = 0; i < Object.keys(ingredients).length; i++) {
     ingredientName = ingredients[i].name;
+    ingredientImage = ingredients[i].image;
     console.log(ingredients[i]);
 
     var data = {
-      Name: ingredientName
+      Name: ingredientName,
+      Image: ingredientImage
     };
     console.log("TESTING " + addButtons.length);
-    addButtons[i].onclick = exportDataDelegate(fridge, ingredientName);
+    addButtons[i].onclick = exportDataDelegate(fridge, data);
     console.log(data);
   };
 
@@ -94,13 +95,6 @@ function searchFunction() {
   }
 }
 
-// function addItem(name) {
-//   var $container = $('<li/>', {
-//     class: 'displayedList'
-//   }).append(
-//     $('<p/>', {
-//       class: 'ingredientName',
-//       text: name
-//     })
-//   ).appendTo($displayed);
-// }
+function clearFridge(key) {
+
+}

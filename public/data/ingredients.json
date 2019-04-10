@@ -1,31 +1,40 @@
 {
   "ingredients": {
     "0": {
-      "name": "Chicken"
+      "name": "Chicken", 
+      "image": "chicken.png"
     },
     "1": {
-      "name": "Pork"
+      "name": "Fish",
+      "image": "fish.png"
     },
     "2": {
-      "name": "Beef"
+      "name": "Beef",
+      "image": "beef.png"
     },
     "3": {
-      "name": "Green Bean"
+      "name": "Green Bean",
+      "image": "green-bean.png"
     },
     "4": {
-      "name": "Avocado"
+      "name": "Avocado",
+      "image": "avocado.png"
     },
     "5": {
-      "name": "Brocolli"
+      "name": "Brocolli",
+      "image": "brocolli.png"
     },
     "6": {
-      "name": "Carrot"
+      "name": "Carrot",
+      "image": "carrot.png"
     },
     "7": {
-      "name": "Tomato"
+      "name": "Tomato",
+      "image": "tomato.png"
     },
     "8": {
-      "name": "Celery"
+      "name": "Celery",
+      "image": "celery.png"
     }
   }
 }

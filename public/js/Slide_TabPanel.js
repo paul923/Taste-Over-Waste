@@ -12,6 +12,8 @@ $(document).ready(function () {
 });
 
 ///////////////Tab panel//////////////////// 
+document.getElementById("ingredientsText").click();
+
 function changeTab(evt, tabName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabPanel");
@@ -21,9 +23,16 @@ function changeTab(evt, tabName) {
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
+    console.log("class name removed.")
   }
   document.getElementById(tabName).style.display = "block";
+  
   evt.currentTarget.className += " active";
+  
+
+
+  displayFridge();
+
 }
   
 
