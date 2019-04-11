@@ -23,6 +23,14 @@
   font-family: 'chalkFont';
   src: url(../font/chalkfont/DK_Crayon_Crumble.ttf);
 }
+
+@font-face {
+  font-family: 'Avenir';
+  src: url(../font/Avenir/Avenir.ttc);
+}
+
+
+/*****************************************/
 #wrapper {
   width: 100%;
   height: 768px;
@@ -35,18 +43,18 @@
 #clear {
   height: 100px;
   width: 100px;
-  border: 2px solid grey;
+/*  border: 2px solid grey;*/
   outline: none;
-  background: white;
+  background: #555555;
+  color: white;
   border-radius: 30px;
   float: left;
   clear: both;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Avenir';
   font-size: 14pt;
   font-weight: bold;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   cursor: pointer;
-  box-shadow: 5px 5px 2px grey;
 }
 #clear:hover {
   background-color: lightgrey;
@@ -106,21 +114,22 @@
 
 .text {
   width: 250px;
-  border: 3px solid #ffe0b3;
+  border: 3px solid #B7D4D4;
   border-radius: 30px;
   padding: 13px;
   top: 0;
   bottom: 0;
   letter-spacing: 4px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
+  font-family: 'Avenir';
+  font-weight: bold;
   text-align: center;
   font-size: 15pt;
   cursor: pointer;
 }
 
 .active {
-  background-color: #ffc167;
+  background-color: #B7D4D4;
+  border: 0;
   color: white;
 }
 
@@ -134,7 +143,7 @@
 }
 
 .text:hover {
-  background-color: #ffe0b3;
+  background-color: #B7D4D4;
   color: white;
   transition: 0.3s;
 }
@@ -148,7 +157,7 @@
 }
 
 #fridgePanel {
-  background-color: #DCDBA8;
+  background-color: #CEDCCA;
   padding: 30px;
   width: 100%;
   height: auto;
@@ -157,6 +166,8 @@
   display: inline-block;
   text-align: center;
 }
+
+
 #searchPanel {
   z-index: 2000;
 }
@@ -262,8 +273,8 @@ span {
   background-color: white;
   width: 180px;
   height: 230px;
-  border: 2px solid #FFB257;
-  position: absolute;
+  border: 2px solid #65908B;
+  
 }
 
 ul {
@@ -275,13 +286,15 @@ ul {
 
 .li {
   padding: 7px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Avenir';
+  font-weight: bold;
 }
 
 .li:hover {
   background-color: grey;
   color: white;
   cursor: pointer;
+  
 }
 h2 {
   margin-top: 7px;
@@ -353,7 +366,7 @@ vertical-align: middle;
   padding: 50px;
   display: inline-block;
   text-align: center;
-  background-color: #FFCBCB;
+  background-color: #CEDCCA;
   height: 100%;
 }
 
@@ -392,12 +405,12 @@ input {
 #msg {
   padding-top: 50px;
   padding-bottom: 50px;
-  width: 400px;
+  width: 600px;
   height: auto;
   margin-top: 10px;
   margin: auto;
   color: white;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Avenir';
   font-size: 30pt;
   font-weight: bold;
 }
