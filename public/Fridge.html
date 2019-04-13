@@ -2,6 +2,9 @@
 <html>
 
 <head>
+  <!--  The main Fridge page. All of the functions are integrated in this page.
+        Panels are are all coded here in html and shown or not shown by user's click.   -->
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale = 1.0,maximum-scale = 1.0">
   <title>Taste Dont Waste</title>
@@ -31,7 +34,7 @@
 <body>
 
   <div id="wrapper">
-    <!-- –----------------------------Banner and Menu----------------------------–-->
+    <!-- –----------------------------Banner and Nav Bar----------------------------–-->
     <div id="banner"><img id="logo" src="images/logo2.png"></div>
     <nav>
       <div class="navBar">
@@ -62,9 +65,9 @@
     </div>
     <!-- –----------------------------Fridge Panel ------------------------------>
     <div class="tabPanel" id="fridgePanel">
-        <button id="clear" onclick="clearFridge()">Clear Fridge</button>
+      <button id="clear" onclick="clearFridge()">Clear Fridge</button>
       <div class="inner" id="imageSide">
-          
+   <!-- –----------------------------Fridge div----------------------------–-->
         <div id="left" class="content">
           <div id="fridgeFrame">
             <div id="innerFridgeFrame">
@@ -97,6 +100,7 @@
           </div>
           <img id="fridge" src="images/fridge.png">
         </div>
+        <!-- –----------------------------Black Board div----------------------------–-->
         <div id="right" class="content">
           <div id="boardFrame">
             <div id="innerBoardFrame">
@@ -106,7 +110,7 @@
               food from being wasted.<br>
               A Canadian household wastes<br>
               roughly 170kg of food every year!<br>
-               That's equivalent to <br>
+              That's equivalent to <br>
               <span>$1530</span> worth of avocados!<br>
             </div>
           </div>
@@ -114,10 +118,8 @@
           <div></div>
         </div>
       </div>
-      <!--------------setting----------------------->
+      <!-- –---------------------------- Setting ------------------------------>
       <div class="inner" id="settingSide">
-        
-
         <a onclick="openNav()"><img id="setting" src="images/setting_icon.png">
         </a>
         <div id="hiddenMenu">
@@ -133,12 +135,16 @@
     </div>
 
   </div>
+  <!-- –----------------------------JavaScript import----------------------------–-->
   <script src="js/Fire_base.js"></script>
   <script src="js/Fridge_Display.js"></script>
   <script src="js/Ingredients_Search.js"></script>
   <script src="js/Slide_TabPanel.js"></script>
 
+  <!-- –----------------------------Clear Fridge----------------------------–-->
   <script>
+    // Clear fridge function is added here to avoid additional issues.
+
     function clearFridge() {
       console.log("CLICKED")
       var refFridge = firebase.database().ref('fridge/');

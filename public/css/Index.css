@@ -8,10 +8,11 @@ html {
     font-family: 'Pacifico';
     src: url(../font/Avenir/Avenir.ttc);
 }
+
 @font-face {
     font-family: 'Avenir';
     src: url(../font/Avenir/Avenir.ttc);
-  }
+}
 
 
 #welcome {
@@ -33,6 +34,6 @@ html {
     font-family: 'Pacifico';
 }
 
-#firebaseui-card-content{
+#firebaseui-card-content {
     background-color: white;
 }

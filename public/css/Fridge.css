@@ -6,18 +6,19 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  background: #f1f1f1;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888; 
+  background: #888;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+  background: #555;
 }
+
 /*******font************/
 @font-face {
   font-family: 'chalkFont';
@@ -40,10 +41,10 @@
   box-sizing: border-box;
 }
 
+/*********************Clear Button********************/
 #clear {
   height: 100px;
   width: 100px;
-/*  border: 2px solid grey;*/
   outline: none;
   background: #555555;
   color: white;
@@ -56,9 +57,12 @@
   letter-spacing: 2px;
   cursor: pointer;
 }
+
 #clear:hover {
   background-color: lightgrey;
 }
+
+/*******************Tab panels**********************/
 .tabPanel {
   display: none;
   height: 600px;
@@ -112,6 +116,7 @@
   display: inline-block;
 }
 
+/*******************Nav bar buttons**********************/
 .text {
   width: 250px;
   border: 3px solid #B7D4D4;
@@ -156,6 +161,7 @@
   border: 1.5px solid lightgrey;
 }
 
+/********************fridge Panel*********************/
 #fridgePanel {
   background-color: #CEDCCA;
   padding: 30px;
@@ -171,10 +177,12 @@
 #searchPanel {
   z-index: 2000;
 }
+
 #innerFridgeFrame img {
   /* width: 80px; */
   height: auto;
 }
+
 /********Inside the image*************/
 .content {
   display: inline-block;
@@ -203,9 +211,11 @@
   height: 82px;
   margin-bottom: 18px;
 }
+
 h3 {
   margin-top: 5px;
 }
+
 .items {
   width: 80px;
   height: 70px;
@@ -222,6 +232,7 @@ h3 {
   margin-bottom: 18px;
   display: inline-block;
 }
+
 /*****************Chalk Board*******************/
 
 #boardFrame {
@@ -261,7 +272,7 @@ span {
   cursor: pointer;
 }
 
-/*********side menu**************/
+/*********************side menu**************************/
 #sidebar {
   width: 80px;
   display: inline;
@@ -275,7 +286,7 @@ span {
   width: 180px;
   height: 230px;
   border: 2px solid #65908B;
-  
+
 }
 
 ul {
@@ -295,11 +306,13 @@ ul {
   background-color: grey;
   color: white;
   cursor: pointer;
-  
+
 }
+
 h2 {
   margin-top: 7px;
 }
+
 .lists {
   padding: 0;
   width: 490px;
@@ -314,6 +327,7 @@ h2 {
   text-align: left;
   text-indent: 20px;
 }
+
 p {
   width: 300px;
   line-height: 50px;
@@ -335,14 +349,14 @@ p {
   border: 2px solid black;
   cursor: pointer;
   padding-bottom: 4px;
-vertical-align: middle;
+  vertical-align: middle;
 
 }
 
 .add:hover {
   background-color: grey;
 }
-
+/*********************Image side div**************************/
 #imageSide {
   margin-left: 200px;
   width: 60%;
@@ -350,7 +364,7 @@ vertical-align: middle;
   position: relative;
   z-index: 2;
 }
-
+/*********************Setting side div**************************/
 #settingSide {
   width: 220px;
   height: auto;

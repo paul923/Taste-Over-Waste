@@ -1,3 +1,5 @@
+// -- reads data from firebase and log all the items on the console, 
+// -- and then invokes displayList function to generate image elements in the fridge
 function displayFridge() {
   var refFridge = firebase.database().ref("fridge/");
   refFridge.once(
@@ -10,9 +12,8 @@ function displayFridge() {
 
     });
 
-  var $displayed = $('#displayed');
-
-
+  // using the list from firebase, it generates html divs and put them 
+  // in the slots in the fridge
   function displayList(list) {
     console.log(list);
     var i = 1;
@@ -25,7 +26,8 @@ function displayFridge() {
       i++;
     }
   }
-  $("#clear").click(function() {
+
+  $("#clear").click(function () {
     $("#fridgeFrame").load(" #fridgeFrame > *");
-  }); 
+  });
 }
