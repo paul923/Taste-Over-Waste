@@ -67,8 +67,10 @@ function attachListener(ingredients) {
 
 }
 
-// searchFunction function -- SHANE PLEASE DO THIS PART I DON:T KNOW ANYTHING AOBUT THIS
-// -- 
+// searchFunction function 
+// -- Changes inputs to uppercase then compares input with ingredients.
+// Displays ingredients based on the character inputs in the search bar, hides
+// ingredients that do not contain the specific char entered.
 function searchFunction() {
   var searchInput, searchInputCap, ul, li, p, i, msgs;
   searchInput = document.getElementById('userInput');
@@ -80,7 +82,6 @@ function searchFunction() {
   msgs = document.getElementById('msg'); // $("#msg")
 
   p = $('.ingredientName');
-  ////////////////////////////////Search Filter Function
 
   // clear the <p>
 
