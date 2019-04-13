@@ -1,38 +1,7 @@
-html {
-    background-image: url('../images/background2.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+body { 
+    position: relative;
 }
-
-@font-face {
-    font-family: 'Pacifico';
-    src: url(../font/Avenir/Avenir.ttc);
-}
-@font-face {
-    font-family: 'Avenir';
-    src: url(../font/Avenir/Avenir.ttc);
-  }
-
-
-#welcome {
-    color: white;
-    box-sizing: content-box;
-    font-size: 20pt;
-    font-family: 'Avenir';
-    font-weight: normal;
-    margin-top: 50px;
-    margin-bottom: 60px;
-    background-color: #444444;
-    opacity: 0.6;
-    padding: 30px;
-    text-align: center;
-}
-
-#appName {
-    font-size: 2.5em;
-    font-family: 'Pacifico';
-}
-
-#firebaseui-card-content{
-    background-color: white;
+title {
+    position: absolute;
+    left: 50%;
 }
