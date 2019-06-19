@@ -13,5 +13,6 @@ Paul Kim
 
 
 
-#### - Files are all organized in /public folder. 
+#### - Link to the App. 
 
+https://projectone-2e3bf.firebaseapp.com/
